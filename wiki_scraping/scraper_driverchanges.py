@@ -5,7 +5,7 @@ import re
 import json
 
 #generate a list with all numbers from 1990 to 2022
-years = list(range(2000, 2023))
+years = list(range(1990, 2023))
 season_prefix = "https://en.wikipedia.org/wiki/"
 season_postfix = "_Formula_One_World_Championship"
 
