@@ -24,10 +24,11 @@ def scrape_driver_data(url):
 
             driver_bio_string = driver_bio_string.replace('\n', '')
             driver_bio_string = re.sub(r'\[[0-9]+\]', '', driver_bio_string)
+            #print(driver_bio_string)
             return driver_bio_string
     except Exception as e:
         print(f"Error scraping {url}: {str(e)}")
-    return ""
+    return " "
 
 # Function to print a progress bar
 def print_progress_bar(iteration, total, length=50):
@@ -47,7 +48,7 @@ if __name__ == '__main__':
     driver_urls = drivers["url"].tolist()
     driver_bios = []
     
-    for i, result in enumerate(pool.imap_unordered(scrape_driver_data, driver_urls)):
+    for i, result in enumerate(pool.imap(scrape_driver_data, driver_urls)):
         driver_bios.append(result)
         print_progress_bar(i + 1, len(driver_urls))
     
