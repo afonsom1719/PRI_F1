@@ -27,7 +27,7 @@ def scrape_constructor_data(url):
             return constructor_bio_string
     except Exception as e:
         print(f"Error scraping {url}: {str(e)}")
-    return ""
+    return " "
 
 # Function to print a progress bar
 def print_progress_bar(iteration, total, length=50):
@@ -47,7 +47,7 @@ if __name__ == '__main__':
     constructor_urls = constructors["url"].tolist()
     constructor_bios = []
     
-    for i, result in enumerate(pool.imap_unordered(scrape_constructor_data, constructor_urls)):
+    for i, result in enumerate(pool.imap(scrape_constructor_data, constructor_urls)):
         constructor_bios.append(result)
         print_progress_bar(i + 1, len(constructor_urls))
     
