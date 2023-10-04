@@ -57,4 +57,4 @@ if __name__ == '__main__':
     constructors["constructor_bio"] = constructor_bios
     
     # Save the updated DataFrame to a new CSV file
-    constructors.to_csv('f1db_csv/constructors_op.csv', index=False)
+    constructors.to_csv('f1db_csv/constructors_info.csv', index=False)

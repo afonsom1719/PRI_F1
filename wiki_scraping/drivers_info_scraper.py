@@ -58,4 +58,4 @@ if __name__ == '__main__':
     drivers["driver_bio"] = driver_bios
     
     # Save the updated DataFrame to a new CSV file
-    drivers.to_csv('f1db_csv/drivers_op.csv', index=False)
+    drivers.to_csv('f1db_csv/drivers_info.csv', index=False)

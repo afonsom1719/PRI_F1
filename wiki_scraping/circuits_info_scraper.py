@@ -27,7 +27,7 @@ def scrape_circuit_data(url):
             return circuit_bio_string
     except Exception as e:
         print(f"Error scraping {url}: {str(e)}")
-    return ""
+    return " "
 
 # Function to print a progress bar
 def print_progress_bar(iteration, total, length=50):
@@ -47,7 +47,7 @@ if __name__ == '__main__':
     circuit_urls = circuits["url"].tolist()
     circuit_bios = []
     
-    for i, result in enumerate(pool.imap_unordered(scrape_circuit_data, circuit_urls)):
+    for i, result in enumerate(pool.imap(scrape_circuit_data, circuit_urls)):
         circuit_bios.append(result)
         print_progress_bar(i + 1, len(circuit_urls))
     
@@ -57,4 +57,4 @@ if __name__ == '__main__':
     circuits["circuit_bio"] = circuit_bios
     
     # Save the updated DataFrame to a new CSV file
-    circuits.to_csv('f1db_csv/circuits_op.csv', index=False)
+    circuits.to_csv('f1db_csv/circuits_info.csv', index=False)
