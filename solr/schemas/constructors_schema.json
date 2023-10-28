@@ -1,0 +1,74 @@
+{
+	"add-field-type": [
+        {
+            "name":"constructor_Name",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+          "name":"constructor_Description",
+          "class":"solr.TextField",
+          "indexAnalyzer":{
+              "tokenizer":{
+                  "class":"solr.StandardTokenizerFactory"
+              },
+              "filters":[
+                  {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                  {"class":"solr.LowerCaseFilterFactory"}
+              ]
+          },
+          "queryAnalyzer":{
+              "tokenizer":{
+                  "class":"solr.StandardTokenizerFactory"
+              },
+              "filters":[
+                  {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                  {"class":"solr.LowerCaseFilterFactory"}
+              ]
+          }
+      },
+      {
+        "name":"constructor_Reference",
+        "class":"solr.StrField"
+      },
+        {
+            "name":"driver_BirthDate",
+            "class":"solr.DateRangeField"
+        }
+    ],
+    "add-field": [
+        {
+            "name": "name",
+            "type": "constructor_Name",
+            "indexed": true
+        },
+        {
+            "name": "constructor_bio",
+            "type": "constructor_Description",
+            "indexed": true
+        },
+        {
+            "name": "constructorRef",
+            "type": "constructor_Reference",
+            "indexed": true
+        }
+    ]
+}
+
