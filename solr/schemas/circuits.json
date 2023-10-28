@@ -1,0 +1,124 @@
+{
+	"add-field-type": [
+        {
+            "name":"circuit_Name",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+          "name":"circuit_Description",
+          "class":"solr.TextField",
+          "indexAnalyzer":{
+              "tokenizer":{
+                  "class":"solr.StandardTokenizerFactory"
+              },
+              "filters":[
+                  {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                  {"class":"solr.LowerCaseFilterFactory"}
+              ]
+          },
+          "queryAnalyzer":{
+              "tokenizer":{
+                  "class":"solr.StandardTokenizerFactory"
+              },
+              "filters":[
+                  {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                  {"class":"solr.LowerCaseFilterFactory"}
+              ]
+          }
+      },
+      {
+        "name":"circuit_Location",
+        "class":"solr.TextField",
+        "indexAnalyzer":{
+            "tokenizer":{
+                "class":"solr.StandardTokenizerFactory"
+            },
+            "filters":[
+                {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                {"class":"solr.LowerCaseFilterFactory"}
+            ]
+        },
+        "queryAnalyzer":{
+            "tokenizer":{
+                "class":"solr.StandardTokenizerFactory"
+            },
+            "filters":[
+                {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                {"class":"solr.LowerCaseFilterFactory"}
+            ]
+        }
+    },
+    {
+        "name":"circuit_Country",
+        "class":"solr.TextField",
+        "indexAnalyzer":{
+            "tokenizer":{
+                "class":"solr.StandardTokenizerFactory"
+            },
+            "filters":[
+                {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                {"class":"solr.LowerCaseFilterFactory"}
+            ]
+        },
+        "queryAnalyzer":{
+            "tokenizer":{
+                "class":"solr.StandardTokenizerFactory"
+            },
+            "filters":[
+                {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                {"class":"solr.LowerCaseFilterFactory"}
+            ]
+        }
+    },
+    {
+    "name":"circuit_Reference",
+    "class":"solr.StrField"
+    }
+    ],
+    "add-field": [
+        {
+            "name": "name",
+            "type": "circuit_Name",
+            "indexed": true
+        },
+        {
+            "name": "circuit_bio",
+            "type": "circuit_Description",
+            "indexed": true
+        },
+        {
+            "name": "circuit_ref",
+            "type": "circuit_Reference",
+            "indexed": true
+        },
+        {
+            "name": "ocation",
+            "type": "circuit_Location",
+            "indexed": true
+        },
+        {
+            "name": "country",
+            "type": "circuit_Country",
+            "indexed": true
+        }
+    ]
+}
+

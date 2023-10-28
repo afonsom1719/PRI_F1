@@ -1,0 +1,84 @@
+{
+	"add-field-type": [
+        {
+            "name":"driver_Name",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+          "name":"driver_Description",
+          "class":"solr.TextField",
+          "indexAnalyzer":{
+              "tokenizer":{
+                  "class":"solr.StandardTokenizerFactory"
+              },
+              "filters":[
+                  {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                  {"class":"solr.LowerCaseFilterFactory"}
+              ]
+          },
+          "queryAnalyzer":{
+              "tokenizer":{
+                  "class":"solr.StandardTokenizerFactory"
+              },
+              "filters":[
+                  {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                  {"class":"solr.LowerCaseFilterFactory"}
+              ]
+          }
+      },
+      {
+        "name":"driver_Reference",
+        "class":"solr.StrField"
+      },
+        {
+            "name":"driver_BirthDate",
+            "class":"solr.DateRangeField"
+        }
+    ],
+    "add-field": [
+        {
+            "name": "forename",
+            "type": "driver_Name",
+            "indexed": true
+        },
+        {
+            "name": "surname",
+            "type": "driver_Name",
+            "indexed": true
+        },
+        {
+            "name": "driver_bio",
+            "type": "driver_Description",
+            "indexed": true
+        },
+        {
+            "name": "code",
+            "type": "driver_Reference",
+            "indexed": true
+        },
+        {
+            "name": "dateOfBirth",
+            "type": "driver_BirthDate",
+            "indexed": true
+        }
+    ]
+}
+
