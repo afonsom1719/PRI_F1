@@ -10,15 +10,15 @@ docker exec -it f1_solr bin/solr create_core -c drivers
 
 # Schema definition via API
 curl -X POST -H 'Content-type:application/json' \
-    --data-binary "@../../f1db_json/circuits_schema.json" \
+    --data-binary "@./circuits_schema.json" \
     http://localhost:8983/solr/circuits/schema
 
 curl -X POST -H 'Content-type:application/json' \
-    --data-binary "@../../f1db_json/constructors_schema.json" \
+    --data-binary "@./constructors_schema.json" \
     http://localhost:8983/solr/constructors/schema
 
 curl -X POST -H 'Content-type:application/json' \
-    --data-binary "@../../f1db_json/drivers_schema.json" \
+    --data-binary "@./drivers_schema.json" \
     http://localhost:8983/solr/drivers/schema
 
 # Populate collection using mapped path inside container.
