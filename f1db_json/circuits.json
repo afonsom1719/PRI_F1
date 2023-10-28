@@ -271,7 +271,7 @@
     "country": "United States",
     "lat": 36.1147,
     "lng": -115.173,
-    "alt": "\\N",
+    "alt": null,
     "url": "https://en.wikipedia.org/wiki/Las_Vegas_Grand_Prix#Circuit",
     "circuit_bio": "The Las Vegas Grand Prix is a planned Formula One Grand Prix due to form part of the 2023 Formula One World Championship, with the event taking place in Las Vegas, Nevada, on a temporary street circuit including the Las Vegas Strip. The first race is scheduled for November 18, 2023."
   },
@@ -907,7 +907,7 @@
     "country": "Qatar",
     "lat": 25.49,
     "lng": 51.4542,
-    "alt": "\\N",
+    "alt": null,
     "url": "http://en.wikipedia.org/wiki/Losail_International_Circuit",
     "circuit_bio": "The Losail International Circuit or Lusail International Circuit (Arabic: حلبة لوسيل الدولية) is a motor racing circuit located just outside the city of Lusail, north of Doha, Qatar. The track is 5.419 km (3.367 mi) in length, with a main straight of 1.068 km (0.664 mi). It is surrounded by artificial grass intended to stop the sand encroaching on the track.Built in just under a year by 1,000 workers at the cost of US$58 million, the track opened in 2004 and hosted the inaugural 2004 Qatar motorcycle Grand Prix, won by Sete Gibernau. In 2007, Losail added permanent outdoor lighting for night races. At the time, the lighting of the Losail Circuit by Musco Lighting was the largest permanent venue sports lighting project in the world, a distinction that now belongs to another Persian Gulf motorsport venue, Yas Marina Circuit in Abu Dhabi. The first night race in MotoGP history was the 2008 Qatar motorcycle Grand Prix in March 2008.In February 2009, a GP2 Asia Series nighttime race took place. The World SBK visited Losail in 2005–2009 and 2014–2019; and the WTCC visited there in 2015–2017.The circuit hosted the 20th race of the 2021 Formula One season, the inaugural edition of the Qatar Grand Prix. Before the second edition of the Grand Prix, the circuit was renovated, the facilities upgraded, and the capacity was increased from 8,000 to 52,000.Beginning in 2024, the FIA World Endurance Championship is set to host its season opener at Losail, the Qatar 1812 km, in addition to the Prologue, the championship's pre-season testing sessions."
   },
@@ -919,7 +919,7 @@
     "country": "USA",
     "lat": 25.9581,
     "lng": -80.2389,
-    "alt": "\\N",
+    "alt": null,
     "url": "http://en.wikipedia.org/wiki/Miami_International_Autodrome",
     "circuit_bio": "The Miami International Autodrome is a purpose-built temporary circuit around Hard Rock Stadium and its private facilities in the Miami suburb of Miami Gardens, Florida, United States. The track is 3.363 mi (5.412 km) long and features 19 corners with an anticipated average speed of around 140 mph (230 km/h). The track was designed and delivered by Formula One track designers, Apex Circuit Design, for the Miami Grand Prix, which was added to the Formula One calendar for the 2022 World Championship."
   }
