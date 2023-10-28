@@ -99,6 +99,10 @@
     {
         "name":"circuit_Url",
         "class":"solr.StrField"
+    },
+    {
+        "name":"circuit_Id",
+        "class":"solr.IntPointField"
     }
     ],
     "add-field": [
@@ -135,6 +139,11 @@
         {
             "name": "alt",
             "type": "circuit_Alt",
+            "indexed": true
+        },
+        {
+            "name": "circuitId",
+            "type": "circuit_Id",
             "indexed": true
         }
     ]

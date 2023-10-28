@@ -77,6 +77,10 @@
     {
         "name":"constructor_Url",
         "class":"solr.StrField"
+    },
+    {
+        "name":"constructor_Id",
+        "class":"solr.IntPointField"
     }
     ],
     "add-field": [
@@ -103,6 +107,11 @@
         {
             "name": "url",
             "type": "constructor_Url",
+            "indexed": true
+        },
+        {
+            "name": "constructorId",
+            "type": "constructor_Id",
             "indexed": true
         }
     ]

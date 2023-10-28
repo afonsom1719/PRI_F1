@@ -77,6 +77,14 @@
     {
         "name":"circuit_Url",
         "class":"solr.StrField"
+    },
+    {
+        "name":"driver_Number",
+        "class":"solr.IntPointField"
+    },
+    {
+        "name":"driver_Id",
+        "class":"solr.IntPointField"
     }
     ],
     "add-field": [
@@ -119,8 +127,17 @@
             "name":"url",
             "type":"circuit_Url",
             "indexed":true
+        },
+        {
+            "name":"number",
+            "type":"driver_Number",
+            "indexed":true
+        },
+        {
+            "name":"driverId",
+            "type":"driver_Id",
+            "indexed":true
         }
-
     ]
 }
 
