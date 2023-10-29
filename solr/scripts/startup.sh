@@ -11,6 +11,12 @@ docker exec -it f1_solr bin/solr create_core -c drivers
 docker exec -it f1_solr bin/solr create_core -c driver_standings
 docker exec -it f1_solr bin/solr create_core -c lap_times
 docker exec -it f1_solr bin/solr create_core -c pit_stops
+docker exec -it f1_solr bin/solr create_core -c qualifying
+docker exec -it f1_solr bin/solr create_core -c races
+docker exec -it f1_solr bin/solr create_core -c results
+
+
+docker exec -it f1_solr bin/solr create_core -c status
 
 # Schema definition via API
 curl -X POST -H 'Content-type:application/json' \
@@ -39,6 +45,20 @@ curl -X POST -H 'Content-type:application/json' \
 curl -X POST -H 'Content-type:application/json' \
     --data-binary "@../../f1db_json/pit_stops_schema.json" \
     http://localhost:8983/solr/pit_stops/schema
+curl -X POST -H 'Content-type:application/json' \
+    --data-binary "@../../f1db_json/qualifying_schema.json" \
+    http://localhost:8983/solr/qualifying/schema
+curl -X POST -H 'Content-type:application/json' \
+    --data-binary "@../../f1db_json/races_schema.json" \
+    http://localhost:8983/solr/races/schema
+curl -X POST -H 'Content-type:application/json' \
+    --data-binary "@../../f1db_json/results_schema.json" \
+    http://localhost:8983/solr/results/schema
+
+
+curl -X POST -H 'Content-type:application/json' \
+    --data-binary "@../../f1db_json/status_schema.json" \
+    http://localhost:8983/solr/status/schema
 
 # Populate collection using mapped path inside container.
 docker exec -it f1_solr bin/post -c circuits /data/circuits.json
@@ -48,4 +68,9 @@ docker exec -it f1_solr bin/post -c drivers /data/drivers.json
 docker exec -it f1_solr bin/post -c driver_standings /data/driver_standings.json
 docker exec -it f1_solr bin/post -c lap_times /data/lap_times.json
 docker exec -it f1_solr bin/post -c pit_stops /data/pit_stops.json
+docker exec -it f1_solr bin/post -c qualifying /data/qualifying.json
+docker exec -it f1_solr bin/post -c races /data/races.json
+docker exec -it f1_solr bin/post -c races /data/results.json
 
+
+docker exec -it f1_solr bin/post -c status /data/status.json

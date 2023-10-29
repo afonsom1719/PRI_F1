@@ -1,0 +1,124 @@
+{
+	"add-field-type": [
+        {
+            "name":"race_Name",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name":"race_Id",
+            "class":"solr.IntPointField"
+        },
+        {
+            "name":"race_Dates",
+            "class":"solr.DateRangeField"
+        },
+        {
+            "name":"race_IntPoint",
+            "class":"solr.IntPointField"
+        },
+        {
+            "name":"race_Times",
+            "class":"solr.TrieDateField"
+        },
+        {
+            "name":"race_Url",
+            "class":"solr.StrField"
+        }
+    ],
+    "add-field": [
+        {
+            "name": "raceId",
+            "type": "race_Id",
+            "indexed": true
+        },
+        {
+            "name": "year",
+            "type": "race_Dates",
+            "indexed": true
+        },
+        {
+            "name": "round",
+            "type": "race_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "name",
+            "type": "race_Name",
+            "indexed": true
+        },
+        {
+            "name": "date",
+            "type": "race_Dates",
+            "indexed": true
+        },
+        {
+            "name": "time",
+            "type": "race_Times",
+            "indexed": true
+        },
+        {
+            "name":"url",
+            "type":"race_Url",
+            "indexed":true
+        },
+        {
+            "name":"fp1_date",
+            "type":"race_Dates",
+            "indexed":true
+        },
+        {
+            "name":"fp1_time",
+            "type":"race_Times",
+            "indexed":true
+        },
+        {
+            "name":"fp2_date",
+            "type":"race_Dates",
+            "indexed":true
+        },
+        {
+            "name":"fp2_time",
+            "type":"race_Times",
+            "indexed":true
+        },
+        {
+            "name":"quali_date",
+            "type":"race_Dates",
+            "indexed":true
+        },
+        {
+            "name":"quali_time",
+            "type":"race_Times",
+            "indexed":true
+        },
+        {
+            "name":"sprint_date",
+            "type":"race_Dates",
+            "indexed":true
+        },
+        {
+            "name":"sprint_time",
+            "type":"race_Times",
+            "indexed":true
+        }
+    ]
+}
+

@@ -1,1 +1,2 @@
 - lap_times_schema.json - use triedatefield for lap time? it is not really a point in time, but a duration
+- results_schema.json - use triedatefield for lap time? it is not really a point in time, but a durationthe first one may be good because it is actually a time, but the following ones are deltas relative to the first

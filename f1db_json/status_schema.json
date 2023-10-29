@@ -1,0 +1,43 @@
+{
+	"add-field-type": [
+        {
+            "name":"status_Status",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name":"status_Id",
+            "class":"solr.IntPointField"
+        }
+    ],
+    "add-field": [
+        {
+            "name":"statusID",
+            "type":"status_Id",
+            "indexed":true
+        },
+        {
+            "name":"status",
+            "type":"status_Status",
+            "indexed":true
+        }
+    ]
+}
+

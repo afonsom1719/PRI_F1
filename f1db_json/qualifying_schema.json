@@ -1,0 +1,64 @@
+{
+	"add-field-type": [
+    {
+        "name":"quali_IntPoint",
+        "class":"solr.IntPointField"
+    },
+    {
+        "name":"quali_Id",
+        "class":"solr.IntPointField"
+    },
+    {
+        "name":"quali_Time",
+        "class":"solr.TrieDateField"
+    }
+    ],
+    "add-field": [
+        {
+            "name": "qualifyId",
+            "type": "quali_Id",
+            "indexed": true
+        },
+        {
+            "name": "raceId",
+            "type": "quali_Id",
+            "indexed": true
+        },
+        {
+            "name": "driverId",
+            "type": "quali_Id",
+            "indexed": true
+        },
+        {
+            "name": "constructorId",
+            "type": "quali_Id",
+            "indexed": true
+        },
+        {
+            "name": "number",
+            "type": "quali_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "position",
+            "type": "quali_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "q1",
+            "type": "quali_Time",
+            "indexed": true
+        },
+        {
+            "name": "q2",
+            "type": "quali_Time",
+            "indexed": true
+        },
+        {
+            "name": "q3",
+            "type": "quali_Time",
+            "indexed": true
+        }
+    ]
+}
+
