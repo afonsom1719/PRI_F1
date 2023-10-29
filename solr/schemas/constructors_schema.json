@@ -45,13 +45,43 @@
           }
       },
       {
-        "name":"constructor_Reference",
-        "class":"solr.StrField"
-      },
-        {
-            "name":"driver_BirthDate",
-            "class":"solr.DateRangeField"
+        "name":"constructor_Nationality",
+        "class":"solr.TextField",
+        "indexAnalyzer":{
+            "tokenizer":{
+                "class":"solr.StandardTokenizerFactory"
+            },
+            "filters":[
+                {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                {"class":"solr.LowerCaseFilterFactory"}
+            ]
+        },
+        "queryAnalyzer":{
+            "tokenizer":{
+                "class":"solr.StandardTokenizerFactory"
+            },
+            "filters":[
+                {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                {"class":"solr.LowerCaseFilterFactory"}
+            ]
         }
+    },
+    {
+    "name":"constructor_Reference",
+    "class":"solr.StrField"
+    },
+    {
+        "name":"driver_BirthDate",
+        "class":"solr.DateRangeField"
+    },
+    {
+        "name":"constructor_Url",
+        "class":"solr.StrField"
+    },
+    {
+        "name":"constructor_Id",
+        "class":"solr.IntPointField"
+    }
     ],
     "add-field": [
         {
@@ -67,6 +97,21 @@
         {
             "name": "constructorRef",
             "type": "constructor_Reference",
+            "indexed": true
+        },
+        {
+            "name": "nationality",
+            "type": "constructor_Nationality",
+            "indexed": true
+        },
+        {
+            "name": "url",
+            "type": "constructor_Url",
+            "indexed": true
+        },
+        {
+            "name": "constructorId",
+            "type": "constructor_Id",
             "indexed": true
         }
     ]

@@ -1,0 +1,54 @@
+{
+	"add-field-type": [
+    {
+        "name":"driverstandings_PositionText",
+        "class":"solr.StrField"
+    },
+    {
+        "name":"driverstandings_Id",
+        "class":"solr.IntPointField"
+    },
+    {
+        "name":"driverstandings_IntPoint",
+        "class":"solr.IntPointField"
+    }
+    ],
+    "add-field": [
+        {
+            "name": "driverStandingsId",
+            "type": "constructorstandings_Id",
+            "indexed": true
+        },
+        {
+            "name": "raceId",
+            "type": "driverstandings_Id",
+            "indexed": true
+        },
+        {
+            "name": "driverId",
+            "type": "driverstandings_Id",
+            "indexed": true
+        },
+        {
+            "name": "points",
+            "type": "driverstandings_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "position",
+            "type": "driverstandings_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "wins",
+            "type": "driverstandings_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "positionText",
+            "type": "driverstandings_PositionText",
+            "indexed": true
+        }
+    ]
+}
+

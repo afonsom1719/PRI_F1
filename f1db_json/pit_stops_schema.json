@@ -1,0 +1,58 @@
+{
+	"add-field-type": [
+    {
+        "name":"pitstop_IntPoint",
+        "class":"solr.IntPointField"
+    },
+    {
+        "name":"pitstopId",
+        "class":"solr.IntPointField"
+    },
+    {
+        "name":"pitstop_Time",
+        "class":"solr.TrieDateField"
+    },
+    {
+        "name":"pitstop_Duration",
+        "class":"solr.TrieFloatField"
+    }
+    ],
+    "add-field": [
+        {
+            "name": "raceId",
+            "type": "pitstop_Id",
+            "indexed": true
+        },
+        {
+            "name": "driverId",
+            "type": "pitstop_Id",
+            "indexed": true
+        },
+        {
+            "name": "stop",
+            "type": "pitstop_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "lap",
+            "type": "pitstop_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "time",
+            "type": "pitstop_Time",
+            "indexed": true
+        },
+        {
+            "name": "duration",
+            "type": "pitstop_Duration",
+            "indexed": true
+        },
+        {
+            "name": "miliseconds",
+            "type": "pitstop_IntPoint",
+            "indexed": true
+        }
+    ]
+}
+

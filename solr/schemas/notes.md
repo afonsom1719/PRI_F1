@@ -1,0 +1,1 @@
+- lap_times_schema.json - use triedatefield for lap time? it is not really a point in time, but a duration

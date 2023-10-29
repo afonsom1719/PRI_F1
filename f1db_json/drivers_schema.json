@@ -75,7 +75,7 @@
         "class":"solr.DateRangeField"
     },
     {
-        "name":"circuit_Url",
+        "name":"driver_Url",
         "class":"solr.StrField"
     },
     {
@@ -125,7 +125,7 @@
         },
         {
             "name":"url",
-            "type":"circuit_Url",
+            "type":"driver_Url",
             "indexed":true
         },
         {

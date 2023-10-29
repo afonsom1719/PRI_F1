@@ -45,13 +45,47 @@
           }
       },
       {
-        "name":"driver_Reference",
-        "class":"solr.StrField"
-      },
-        {
-            "name":"driver_BirthDate",
-            "class":"solr.DateRangeField"
+        "name":"driver_Nationality",
+        "class":"solr.TextField",
+        "indexAnalyzer":{
+            "tokenizer":{
+                "class":"solr.StandardTokenizerFactory"
+            },
+            "filters":[
+                {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                {"class":"solr.LowerCaseFilterFactory"}
+            ]
+        },
+        "queryAnalyzer":{
+            "tokenizer":{
+                "class":"solr.StandardTokenizerFactory"
+            },
+            "filters":[
+                {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                {"class":"solr.LowerCaseFilterFactory"}
+            ]
         }
+    },
+    {
+    "name":"driver_Reference",
+    "class":"solr.StrField"
+    },
+    {
+        "name":"driver_BirthDate",
+        "class":"solr.DateRangeField"
+    },
+    {
+        "name":"driver_Url",
+        "class":"solr.StrField"
+    },
+    {
+        "name":"driver_Number",
+        "class":"solr.IntPointField"
+    },
+    {
+        "name":"driver_Id",
+        "class":"solr.IntPointField"
+    }
     ],
     "add-field": [
         {
@@ -70,6 +104,11 @@
             "indexed": true
         },
         {
+            "name": "driverRef",
+            "type": "driver_Reference",
+            "indexed": true
+        },
+        {
             "name": "code",
             "type": "driver_Reference",
             "indexed": true
@@ -78,6 +117,26 @@
             "name": "dateOfBirth",
             "type": "driver_BirthDate",
             "indexed": true
+        },
+        {
+            "name":"nationality",
+            "type":"driver_Nationality",
+            "indexed":true
+        },
+        {
+            "name":"url",
+            "type":"driver_Url",
+            "indexed":true
+        },
+        {
+            "name":"number",
+            "type":"driver_Number",
+            "indexed":true
+        },
+        {
+            "name":"driverId",
+            "type":"driver_Id",
+            "indexed":true
         }
     ]
 }

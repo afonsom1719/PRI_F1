@@ -89,8 +89,20 @@
         }
     },
     {
-    "name":"circuit_Reference",
-    "class":"solr.StrField"
+        "name":"circuit_Alt",
+        "class":"solr.IntPointField"
+    },
+    {
+        "name":"circuit_Reference",
+        "class":"solr.StrField"
+    },
+    {
+        "name":"circuit_Url",
+        "class":"solr.StrField"
+    },
+    {
+        "name":"circuit_Id",
+        "class":"solr.IntPointField"
     }
     ],
     "add-field": [
@@ -105,18 +117,33 @@
             "indexed": true
         },
         {
-            "name": "circuit_ref",
+            "name": "circuitRef",
             "type": "circuit_Reference",
             "indexed": true
         },
         {
-            "name": "ocation",
+            "name": "location",
             "type": "circuit_Location",
             "indexed": true
         },
         {
             "name": "country",
             "type": "circuit_Country",
+            "indexed": true
+        },
+        {
+            "name": "url",
+            "type": "circuit_Url",
+            "indexed": true
+        },
+        {
+            "name": "alt",
+            "type": "circuit_Alt",
+            "indexed": true
+        },
+        {
+            "name": "circuitId",
+            "type": "circuit_Id",
             "indexed": true
         }
     ]

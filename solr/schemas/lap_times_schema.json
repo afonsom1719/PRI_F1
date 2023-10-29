@@ -1,0 +1,49 @@
+{
+	"add-field-type": [
+    {
+        "name":"lap_IntPoint",
+        "class":"solr.IntPointField"
+    },
+    {
+        "name":"laptime_Id",
+        "class":"solr.IntPointField"
+    },
+    {
+        "name":"laptime_Time",
+        "class":"solr.TrieDateField"
+    }
+    ],
+    "add-field": [
+        {
+            "name": "raceId",
+            "type": "laptime_Id",
+            "indexed": true
+        },
+        {
+            "name": "driverId",
+            "type": "laptime_Id",
+            "indexed": true
+        },
+        {
+            "name": "lap",
+            "type": "lap_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "position",
+            "type": "lap_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "time",
+            "type": "laptime_Time",
+            "indexed": true
+        },
+        {
+            "name": "miliseconds",
+            "type": "lap_IntPoint",
+            "indexed": true
+        }
+    ]
+}
+
