@@ -14,8 +14,8 @@ docker exec -it f1_solr bin/solr create_core -c pit_stops
 docker exec -it f1_solr bin/solr create_core -c qualifying
 docker exec -it f1_solr bin/solr create_core -c races
 docker exec -it f1_solr bin/solr create_core -c results
-
-
+docker exec -it f1_solr bin/solr create_core -c seasons
+docker exec -it f1_solr bin/solr create_core -c sprint_results
 docker exec -it f1_solr bin/solr create_core -c status
 
 # Schema definition via API
@@ -42,19 +42,30 @@ curl -X POST -H 'Content-type:application/json' \
 curl -X POST -H 'Content-type:application/json' \
     --data-binary "@../../f1db_json/lap_times_schema.json" \
     http://localhost:8983/solr/lap_times/schema
+
 curl -X POST -H 'Content-type:application/json' \
     --data-binary "@../../f1db_json/pit_stops_schema.json" \
     http://localhost:8983/solr/pit_stops/schema
+
 curl -X POST -H 'Content-type:application/json' \
     --data-binary "@../../f1db_json/qualifying_schema.json" \
     http://localhost:8983/solr/qualifying/schema
+
 curl -X POST -H 'Content-type:application/json' \
     --data-binary "@../../f1db_json/races_schema.json" \
     http://localhost:8983/solr/races/schema
+
 curl -X POST -H 'Content-type:application/json' \
     --data-binary "@../../f1db_json/results_schema.json" \
     http://localhost:8983/solr/results/schema
 
+curl -X POST -H 'Content-type:application/json' \
+    --data-binary "@../../f1db_json/seasons_schema.json" \
+    http://localhost:8983/solr/seasons/schema
+
+curl -X POST -H 'Content-type:application/json' \
+    --data-binary "@../../f1db_json/sprint_results_schema.json" \
+    http://localhost:8983/solr/sprint_results/schema
 
 curl -X POST -H 'Content-type:application/json' \
     --data-binary "@../../f1db_json/status_schema.json" \
@@ -70,7 +81,7 @@ docker exec -it f1_solr bin/post -c lap_times /data/lap_times.json
 docker exec -it f1_solr bin/post -c pit_stops /data/pit_stops.json
 docker exec -it f1_solr bin/post -c qualifying /data/qualifying.json
 docker exec -it f1_solr bin/post -c races /data/races.json
-docker exec -it f1_solr bin/post -c races /data/results.json
-
-
+docker exec -it f1_solr bin/post -c results /data/results.json
+docker exec -it f1_solr bin/post -c seasons /data/seasons.json
+docker exec -it f1_solr bin/post -c sprint_results /data/sprint_results.json
 docker exec -it f1_solr bin/post -c status /data/status.json

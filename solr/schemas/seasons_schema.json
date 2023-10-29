@@ -1,0 +1,25 @@
+{
+	"add-field-type": [
+    {
+        "name":"season_Year",
+        "class":"solr.IntPointField"
+    },
+    {
+        "name":"season_Url",
+        "class":"solr.StrField"
+    }
+    ],
+    "add-field": [
+        {
+            "name": "year",
+            "type": "season_Year",
+            "indexed": true
+        },
+        {
+            "name": "url",
+            "type": "season_Url",
+            "indexed": true
+        }
+    ]
+}
+

@@ -1,0 +1,111 @@
+{
+	"add-field-type": [
+        {
+            "name":"result_Id",
+            "class":"solr.IntPointField"
+        },
+        {
+            "name":"race_Dates",
+            "class":"solr.DateRangeField"
+        },
+        {
+            "name":"result_IntPoint",
+            "class":"solr.IntPointField"
+        },
+        {
+            "name":"result_IntStr",
+            "class":"solr.StrField"
+        },
+        {
+            "name":"result_Times",
+            "class":"solr.TrieDateField"
+        },
+        {
+            "name":"result_Speed",
+            "class":"solr.TrieFloatField"
+        }
+    ],
+    "add-field": [
+        {
+            "name": "resultId",
+            "type": "result_Id",
+            "indexed": true
+        },
+        {
+            "name": "raceId",
+            "type": "result_Id",
+            "indexed": true
+        },
+        {
+            "name": "driverId",
+            "type": "result_Id",
+            "indexed": true
+        },
+        {
+            "name": "constructorId",
+            "type": "result_Id",
+            "indexed": true
+        },
+        {
+            "name": "number",
+            "type": "result_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "grid",
+            "type": "result_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "position",
+            "type": "result_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "positionText",
+            "type": "result_IntStr",
+            "indexed": true
+        },
+        {
+            "name": "positionOrder",
+            "type": "result_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "points",
+            "type": "result_IntPoint",
+            "indexed": true
+        },
+        {
+            "name":"laps",
+            "type":"result_IntPoint",
+            "indexed":true
+        },
+        {
+            "name":"time",
+            "type":"result_Times",
+            "indexed":true
+        },
+        {
+            "name":"miliseconds",
+            "type":"result_IntPoint",
+            "indexed":true
+        },
+        {
+            "name":"fastestLap",
+            "type":"result_IntPoint",
+            "indexed":true
+        },
+        {
+            "name":"fastestLapTime",
+            "type":"result_Times",
+            "indexed":true
+        },
+        {
+            "name":"statusId",
+            "type":"result_Id",
+            "indexed":true
+        }
+    ]
+}
+
