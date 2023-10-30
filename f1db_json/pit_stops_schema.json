@@ -10,7 +10,7 @@
     },
     {
         "name":"pitstop_Time",
-        "class":"solr.TrieDateField"
+        "class":"solr.DateRangeField"
     },
     {
         "name":"pitstop_Duration",

@@ -2,7 +2,7 @@
 	"add-field-type": [
     {
         "name":"constructorstandings_PositionText",
-        "class":"solr.StrField"
+        "class":"solr.TextField"
     },
     {
         "name":"constructorstandings_Id",
