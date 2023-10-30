@@ -5,7 +5,7 @@
         "class":"solr.IntPointField"
     },
     {
-        "name":"pitstopId",
+        "name":"pitstop_Id",
         "class":"solr.IntPointField"
     },
     {

@@ -28,7 +28,7 @@ curl -X POST -H 'Content-type:application/json' \
     http://localhost:8983/solr/constructors/schema
 
 curl -X POST -H 'Content-type:application/json' \
-    --data-binary "@../../f1db_json/constructors_standings_schema.json" \
+    --data-binary "@../../f1db_json/constructor_standings_schema.json" \
     http://localhost:8983/solr/constructor_standings/schema
 
 curl -X POST -H 'Content-type:application/json' \
@@ -74,7 +74,7 @@ curl -X POST -H 'Content-type:application/json' \
 # Populate collection using mapped path inside container.
 docker exec -it f1_solr bin/post -c circuits /data/circuits.json
 docker exec -it f1_solr bin/post -c constructors /data/constructors.json
-docker exec -it f1_solr bin/post -c constructors_standings /data/constructors_standings.json
+docker exec -it f1_solr bin/post -c constructors_standings /data/constructor_standings.json
 docker exec -it f1_solr bin/post -c drivers /data/drivers.json
 docker exec -it f1_solr bin/post -c driver_standings /data/driver_standings.json
 docker exec -it f1_solr bin/post -c lap_times /data/lap_times.json

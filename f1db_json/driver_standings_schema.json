@@ -16,7 +16,7 @@
     "add-field": [
         {
             "name": "driverStandingsId",
-            "type": "constructorstandings_Id",
+            "type": "driverstandings_Id",
             "indexed": true
         },
         {

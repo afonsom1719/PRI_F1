@@ -29,7 +29,7 @@
     ],
     "add-field": [
         {
-            "name":"statusID",
+            "name":"statusId",
             "type":"status_Id",
             "indexed":true
         },
