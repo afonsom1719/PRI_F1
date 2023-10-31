@@ -102,7 +102,7 @@
         },
         {
             "name":"fastestLapTime_ms",
-            "type":"result_Times",
+            "type":"result_TimesMs",
             "indexed":true
         },
         {

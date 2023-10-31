@@ -49,17 +49,17 @@
             "indexed": true
         },
         {
-            "name": "q1",
+            "name": "q1_ms",
             "type": "quali_TimeMs",
             "indexed": true
         },
         {
-            "name": "q2",
+            "name": "q2_ms",
             "type": "quali_TimeMs",
             "indexed": true
         },
         {
-            "name": "q3",
+            "name": "q3_ms",
             "type": "quali_TimeMs",
             "indexed": true
         }
