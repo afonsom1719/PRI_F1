@@ -11,6 +11,10 @@
     {
         "name":"quali_Time",
         "class":"solr.TrieDateField"
+    },
+    {
+        "name":"quali_TimeMs",
+        "class":"solr.TextField"
     }
     ],
     "add-field": [
@@ -46,17 +50,17 @@
         },
         {
             "name": "q1",
-            "type": "quali_Time",
+            "type": "quali_TimeMs",
             "indexed": true
         },
         {
             "name": "q2",
-            "type": "quali_Time",
+            "type": "quali_TimeMs",
             "indexed": true
         },
         {
             "name": "q3",
-            "type": "quali_Time",
+            "type": "quali_TimeMs",
             "indexed": true
         }
     ]

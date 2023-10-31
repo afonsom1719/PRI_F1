@@ -23,6 +23,10 @@
         {
             "name":"result_Speed",
             "class":"solr.TrieFloatField"
+        },
+        {
+            "name":"result_TimesMs",
+            "class":"solr.IntPointField"
         }
     ],
     "add-field": [
@@ -82,11 +86,6 @@
             "indexed":true
         },
         {
-            "name":"time",
-            "type":"result_Times",
-            "indexed":true
-        },
-        {
             "name":"miliseconds",
             "type":"result_IntPoint",
             "indexed":true
@@ -102,7 +101,7 @@
             "indexed":true
         },
         {
-            "name":"fastestLapTime",
+            "name":"fastestLapTime_ms",
             "type":"result_Times",
             "indexed":true
         },
