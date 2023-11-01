@@ -44,11 +44,6 @@
             "indexed": true
         },
         {
-            "name": "duration",
-            "type": "pitstop_Duration",
-            "indexed": true
-        },
-        {
             "name": "miliseconds",
             "type": "pitstop_IntPoint",
             "indexed": true
