@@ -1,6 +1,28 @@
 {
 	"add-field-type": [
     {
+        "name":"season_Text",
+        "class":"solr.TextField",
+        "indexAnalyzer":{
+            "tokenizer":{
+                "class":"solr.StandardTokenizerFactory"
+            },
+            "filters":[
+                {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                {"class":"solr.LowerCaseFilterFactory"}
+            ]
+        },
+        "queryAnalyzer":{
+            "tokenizer":{
+                "class":"solr.StandardTokenizerFactory"
+            },
+            "filters":[
+                {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                {"class":"solr.LowerCaseFilterFactory"}
+            ]
+        }
+    },
+    {
         "name":"season_Year",
         "class":"solr.IntPointField"
     },
@@ -18,6 +40,16 @@
         {
             "name": "url",
             "type": "season_Url",
+            "indexed": true
+        },
+        {
+            "name": "driver_changes",
+            "type": "season_Text",
+            "indexed": true
+        },
+        {
+            "name": "reg_changes",
+            "type": "season_Text",
             "indexed": true
         }
     ]
