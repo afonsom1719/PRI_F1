@@ -7,6 +7,7 @@
 docker exec -it f1_solr bin/solr create_core -c circuits
 docker exec -it f1_solr bin/solr create_core -c constructors
 docker exec -it f1_solr bin/solr create_core -c constructor_standings
+docker exec -it f1_solr bin/solr create_core -c constructor_results
 docker exec -it f1_solr bin/solr create_core -c drivers
 docker exec -it f1_solr bin/solr create_core -c driver_standings
 docker exec -it f1_solr bin/solr create_core -c lap_times
@@ -30,6 +31,10 @@ curl -X POST -H 'Content-type:application/json' \
 curl -X POST -H 'Content-type:application/json' \
     --data-binary "@../../f1db_json/constructor_standings_schema.json" \
     http://localhost:8983/solr/constructor_standings/schema
+
+curl -X POST -H 'Content-type:application/json' \
+    --data-binary "@../../f1db_json/constructor_results_schema.json" \
+    http://localhost:8983/solr/constructor_results/schema
 
 curl -X POST -H 'Content-type:application/json' \
     --data-binary "@../../f1db_json/drivers_schema.json" \
@@ -75,6 +80,7 @@ curl -X POST -H 'Content-type:application/json' \
 docker exec -it f1_solr bin/post -c circuits /data/circuits.json
 docker exec -it f1_solr bin/post -c constructors /data/constructors.json
 docker exec -it f1_solr bin/post -c constructor_standings /data/constructor_standings.json
+docker exec -it f1_solr bin/post -c constructor_results /data/constructor_results.json
 docker exec -it f1_solr bin/post -c drivers /data/drivers.json
 docker exec -it f1_solr bin/post -c driver_standings /data/driver_standings.json
 docker exec -it f1_solr bin/post -c lap_times /data/lap_times.json

@@ -1,0 +1,40 @@
+{
+	"add-field-type": [
+    {
+        "name":"contructor_IntPoint",
+        "class":"solr.IntPointField"
+    },
+    {
+        "name":"contructor_Status",
+        "class":"solr.StrField"
+    }
+    ],
+    "add-field": [
+        {
+            "name": "constructorResultsId",
+            "type": "contructor_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "raceId",
+            "type": "contructor_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "constructorId",
+            "type": "contructor_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "points",
+            "type": "contructor_IntPoint",
+            "indexed": true
+        },
+        {
+            "name": "status",
+            "type": "contructor_Status",
+            "indexed": true
+        }
+    ]
+}
+
