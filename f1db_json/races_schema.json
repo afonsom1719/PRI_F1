@@ -79,43 +79,28 @@
             "indexed":true
         },
         {
-            "name":"fp1_date",
-            "type":"race_Dates",
+            "name":"fp1_datetime",
+            "type":"race_DateTime",
             "indexed":true
         },
         {
-            "name":"fp1_time",
-            "type":"race_Times",
+            "name":"fp2_datetime",
+            "type":"race_DateTime",
             "indexed":true
         },
         {
-            "name":"fp2_date",
-            "type":"race_Dates",
+            "name":"fp3_datetime",
+            "type":"race_DateTime",
             "indexed":true
         },
         {
-            "name":"fp2_time",
-            "type":"race_Times",
+            "name":"quali_datetime",
+            "type":"race_DateTime",
             "indexed":true
         },
         {
-            "name":"quali_date",
-            "type":"race_Dates",
-            "indexed":true
-        },
-        {
-            "name":"quali_time",
-            "type":"race_Times",
-            "indexed":true
-        },
-        {
-            "name":"sprint_date",
-            "type":"race_Dates",
-            "indexed":true
-        },
-        {
-            "name":"sprint_time",
-            "type":"race_Times",
+            "name":"sprint_datetime",
+            "type":"race_DateTime",
             "indexed":true
         }
     ]
