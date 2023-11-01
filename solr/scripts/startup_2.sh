@@ -78,9 +78,9 @@ docker exec -it f1_solr bin/post -c constructor_standings /data/constructor_stan
 docker exec -it f1_solr bin/post -c drivers /data/drivers.json
 docker exec -it f1_solr bin/post -c driver_standings /data/driver_standings.json
 docker exec -it f1_solr bin/post -c lap_times /data/lap_times.json
-docker exec -it f1_solr bin/post -c pit_stops /data/pit_stops.json
+docker exec -it f1_solr bin/post -c pit_stops /data/pit_stops_datetime.json
 docker exec -it f1_solr bin/post -c qualifying /data/qualifying_ms.json
-docker exec -it f1_solr bin/post -c races /data/races.json
+docker exec -it f1_solr bin/post -c races /data/races_datetime.json
 docker exec -it f1_solr bin/post -c results /data/results_ms.json
 docker exec -it f1_solr bin/post -c seasons /data/seasons.json
 docker exec -it f1_solr bin/post -c sprint_results /data/sprint_results_ms.json

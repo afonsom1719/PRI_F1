@@ -15,6 +15,10 @@
     {
         "name":"pitstop_Duration",
         "class":"solr.TrieFloatField"
+    },
+    {
+        "name":"pitstop_DateTime",
+        "class":"solr.DateRangeField"
     }
     ],
     "add-field": [
@@ -39,8 +43,8 @@
             "indexed": true
         },
         {
-            "name": "time",
-            "type": "pitstop_Time",
+            "name": "datetime",
+            "type": "pitstop_DateTime",
             "indexed": true
         },
         {

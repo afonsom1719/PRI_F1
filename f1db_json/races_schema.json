@@ -41,6 +41,10 @@
         {
             "name":"race_Url",
             "class":"solr.StrField"
+        },
+        {
+            "name":"race_DateTime",
+            "class":"solr.DateRangeField"
         }
     ],
     "add-field": [
@@ -65,13 +69,8 @@
             "indexed": true
         },
         {
-            "name": "date",
-            "type": "race_Dates",
-            "indexed": true
-        },
-        {
-            "name": "time",
-            "type": "race_Times",
+            "name": "datetime",
+            "type": "race_DateTime",
             "indexed": true
         },
         {
