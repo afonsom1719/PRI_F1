@@ -64,6 +64,11 @@
             "indexed": true
         },
         {
+            "name": "circuitId",
+            "type": "race_IntPoint",
+            "indexed": true
+        },
+        {
             "name": "name",
             "type": "race_Name",
             "indexed": true
