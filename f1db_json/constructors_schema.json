@@ -78,7 +78,7 @@
                 {"class":"solr.EnglishPossessiveFilterFactory"},
                 {"class":"solr.EnglishMinimalStemFilterFactory"},
                 {"class":"solr.StopFilterFactory"},
-                {"class":"solr.EdgeNGramFilterFactory", "minGramSize": 4 , "maxGramSize": 10}
+                {"class":"solr.EdgeNGramFilterFactory", "minGramSize": 2 , "maxGramSize": 10}
             ]
         },
         "queryAnalyzer":{
@@ -92,7 +92,7 @@
                 {"class":"solr.EnglishPossessiveFilterFactory"},
                 {"class":"solr.EnglishMinimalStemFilterFactory"},
                 {"class":"solr.StopFilterFactory"},
-                {"class":"solr.EdgeNGramFilterFactory", "minGramSize": 4 , "maxGramSize": 10}
+                {"class":"solr.EdgeNGramFilterFactory", "minGramSize": 2 , "maxGramSize": 10}
             ]
         }
     },
