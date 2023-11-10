@@ -10,7 +10,8 @@
             "filters":[
                 {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                 {"class":"solr.LowerCaseFilterFactory"},
-                {"class":"solr.SnowballPorterFilterFactory", "language":"English"}
+                {"class":"solr.SnowballPorterFilterFactory", "language":"English"},
+                {"class":"solr.EdgeNGramFilterFactory", "minGramSize": 4 , "maxGramSize": 10}
             ]
         },
         "queryAnalyzer":{

@@ -31,7 +31,8 @@
               },
               "filters":[
                   {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                  {"class":"solr.LowerCaseFilterFactory"}
+                  {"class":"solr.LowerCaseFilterFactory"},
+                  {"class":"solr.EdgeNGramFilterFactory", "minGramSize": 4 , "maxGramSize": 10}
               ]
           },
           "queryAnalyzer":{
