@@ -14,7 +14,7 @@
     },
     {
         "name":"quali_TimeMs",
-        "class":"solr.TextField"
+        "class":"solr.IntPointField"
     }
     ],
     "add-field": [
