@@ -1,0 +1,40 @@
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline-end: 10px;
+}
+
+.dropdown-label {
+    font-weight: bold;
+}
+
+.dropdown-select {
+    width: 50px;
+    height: 30px;
+}
+
+svg {
+    fill: black;
+    float: left;
+}
+
+div .css-13cymwt-control {
+    min-height: 28px;
+}
+
+div .css-1xc3v61-indicatorContainer {
+    padding: 0px;
+}
+
+div .css-15lsz6c-indicatorContainer {
+    padding: 0px;
+}
+
+div .css-1dimb5e-singleValue {
+    margin-inline-start: 4px;
+}
+
+div .css-hlgwow {
+    padding: 0px;
+}
