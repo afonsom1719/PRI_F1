@@ -143,6 +143,13 @@
     {
         "name":"circuit_Id",
         "class":"solr.IntPointField"
+    },
+    {
+        "name": "courseVector",
+        "class": "solr.DenseVectorField",
+        "vectorDimension": 384,
+        "similarityFunction": "cosine",
+        "knnAlgorithm": "hnsw"
     }
     ],
     "add-field": [
