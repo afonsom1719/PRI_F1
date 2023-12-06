@@ -34,7 +34,7 @@ def display_results(results):
         return
 
     for doc in docs:
-        print(f"* {doc.get('circuitRef')} {doc.get('name')} [score: {doc.get('score'):.2f}]")
+        print(f"* {doc.get('circuitRef')} {doc.get('name')} ")
 
 def main():
     solr_endpoint = "http://localhost:8983/solr"

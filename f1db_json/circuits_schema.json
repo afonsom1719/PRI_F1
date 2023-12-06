@@ -145,6 +145,10 @@
         "class":"solr.IntPointField"
     },
     {
+        "name":"circuit_Vector",
+        "class":"solr.IntPointField"
+    },
+    {
         "name": "courseVector",
         "class": "solr.DenseVectorField",
         "vectorDimension": 384,
@@ -192,6 +196,12 @@
             "name": "circuitId",
             "type": "circuit_Id",
             "indexed": true
+        },
+        {
+            "name": "vector",
+            "type": "courseVector",
+            "indexed": true,
+            "stored": true
         }
     ]
 }
