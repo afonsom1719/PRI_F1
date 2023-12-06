@@ -2,7 +2,7 @@ import sys
 import json
 from sentence_transformers import SentenceTransformer
 
-# example usage: cat ../f1db_json/circuits.json | python3 get_embeddings.py > ../f1db_json/semantic/circuits_semantic.json
+# example usage: cat ../f1db_json/circuits.json | python3 get_embeddings.py > ../f1db_json/circuits_semantic.json
 
 # Load the SentenceTransformer model
 model = SentenceTransformer('all-MiniLM-L6-v2')
