@@ -600,18 +600,6 @@
     "driver_bio": "Johannes Franciscus Verstappen (pronounced [ˈjɔs vɛrˈstɑpə(n)]; born 4 March 1972) is a Dutch former racing driver who competed in Formula One for Benetton, Simtek, Footwork Arrows, Tyrrell, Stewart, and Minardi. Verstappen was the German Formula Three champion and Masters of Formula Three winner in 1993.In Formula 1, Verstappen raced for seven different teams during eight seasons. From 1994 through 2003, he scored two podium finishes in his career, the first Dutch F1 racer to do so.Since leaving F1, Verstappen won races in A1 Grand Prix and Le Mans Series LMP2 races, winning the 24 hours of Le Mans' 2008 LMP2 class. Verstappen has coached his son Max from an early age in karting, through to Max's successes as an F1 driver becoming the 2021 and 2022 Formula One Drivers Champion. Jos has also served as a manager for Max."
   },
   {
-    "driverId": 51,
-    "driverRef": "wilson",
-    "number": null,
-    "code": null,
-    "forename": "Justin",
-    "surname": "Wilson",
-    "dateOfBirth": "1978-07-31",
-    "nationality": "British",
-    "url": "http://en.wikipedia.org/wiki/Justin_Wilson_(racing_driver)",
-    "driver_bio": "Justin Boyd Wilson (31 July 1978 – 24 August 2015) was a British professional open-wheel racing driver who competed in Formula One (F1) in 2003, the Champ Car World Series (CCWS) from 2004 to 2007 and the IndyCar Series from 2008 to 2015. He won the first Formula Palmer Audi (FPA) in 1998, the International Formula 3000 Championship (IF3000) with Nordic Racing in 2001, and co-won the 2012 24 Hours of Daytona for Michael Shank Racing.Wilson began karting at the age of eight and achieved consistent results, before progressing to car racing in the Formula Vauxhall Championship. He won the FPA title and earned a fully funded seat in IF3000, becoming the first British driver to win the series championship in 2001. He moved to the 2002 World Series by Nissan for the Racing Engineering team and finished fourth. Through an investment scheme where the public could purchase shares in Wilson, he drove for the Minardi and Jaguar teams in the 2003 F1 season.He drove for the Conquest Racing and RuSPORT teams in the CCWS from 2004 to 2007, winning four races and finishing runner-up in the 2006 and 2007 drivers' championships. Wilson went to Newman/Haas/Lanigan Racing for the 2008 IndyCar Series, winning the Detroit Indy Grand Prix. A move to the low-budget Dale Coyne Racing (DCR) team for 2009 resulted in the team's first open-wheel victory at the Grand Prix at the Glen. Wilson moved to the Dreyer & Reinbold Racing squad from 2010 and 2011 but did not win a race. He returned to DCR for 2012 to 2014, winning the 2012 Firestone 550 and finishing sixth in the 2013 drivers' championship.Late in the 2015 season, in the ABC Supply 500 at Pocono Raceway, Wilson died after debris from a crashed car struck his helmet. He was the first driver to die from injuries sustained in an IndyCar race since Dan Wheldon in 2011. As of 2023[update], it is also the most recent fatal accident to have occurred in IndyCar. His organs were donated to save the lives of five people. A hairpin corner at Snetterton Circuit was renamed after him and a memorial fund was established to support his children."
-  },
-  {
     "driverId": 52,
     "driverRef": "firman",
     "number": null,
@@ -2722,18 +2710,6 @@
     "nationality": "British",
     "url": "http://en.wikipedia.org/wiki/Tiff_Needell",
     "driver_bio": "Timothy Richard \"Tiff\" Needell (born 29 October 1951) is a British racing driver and television presenter. He is a presenter of Lovecars, and formerly served as co-presenter of Top Gear and Fifth Gear."
-  },
-  {
-    "driverId": 228,
-    "driverRef": "desire_wilson",
-    "number": null,
-    "code": null,
-    "forename": "Desiré",
-    "surname": "Wilson",
-    "dateOfBirth": "1953-11-26",
-    "nationality": "South African",
-    "url": "http://en.wikipedia.org/wiki/Desir%C3%A9_Wilson",
-    "driver_bio": "Desiré Randall Wilson (born 26 November 1953) is a former racing driver from South Africa and one of only five women to have competed in Formula One. Born in Brakpan, she entered one Formula One World Championship Grand Prix in 1980 with a non-works RAM Racing-prepared Williams FW07, but failed to qualify. She also raced in the 1981 non-world championship South African Grand Prix in a one off deal with Tyrrell Racing. This race was not part of the 1981 world championship due, in part, to the FISA–FOCA war. She qualified 16th and, after a disastrous start where the car stalled, she moved up through the field in wet conditions; as conditions dried she fell back and damaged the car when it touched a wall while she was letting the race leader through.She became the only woman to win a Formula One race of any kind when she won at Brands Hatch in the short-lived British Aurora F1 Championship in 1980. As a result of this achievement, she has a grandstand at Brands Hatch named after her. Following her attempts in Formula One, Wilson participated in other disciplines including CART and sports car racing. In 1982, Wilson entered the Indianapolis 500, but failed to qualify. She did not qualify for 1983 and 1984 Indy 500s either.She is married to fellow South African and road course architect Alan Wilson."
   },
   {
     "driverId": 229,
