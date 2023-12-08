@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/eduardo/Documents/School/Courses/4 year/PRI/azure-search-openai-demo-main/app/backend/backend_env"
+VIRTUAL_ENV="/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

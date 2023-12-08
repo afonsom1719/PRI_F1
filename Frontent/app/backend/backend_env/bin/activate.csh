@@ -8,7 +8,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/home/eduardo/Documents/School/Courses/4 year/PRI/azure-search-openai-demo-main/app/backend/backend_env"
+setenv VIRTUAL_ENV "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"

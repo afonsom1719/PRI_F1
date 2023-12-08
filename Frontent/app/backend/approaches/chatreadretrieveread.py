@@ -9,6 +9,7 @@ from azure.search.documents.models import QueryType
 from approaches.approach import Approach
 from text import nonewlines
 import logging
+import utils.solr_requests as solr_requests
 
 # Create a logger
 logger = logging.getLogger("globalLogger")
@@ -69,12 +70,12 @@ openai = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 # (answer) with that prompt.
 class ChatReadRetrieveReadApproach(Approach):
     prompt_prefix = """<|im_start|>system
-        Assistant helps the company employees extracting information from uploaded invoices and providing answers related to the extracted data, performing basic calculations, creating images according to the user input, and also answering their questions about everything.
-        If the user asks if the assistant can extract data from invoices, tell him you can but he needs to upload them in case they have not already. In this case do not include any citation.
-        Be brief in your answers. Make a citation whenever possible.
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
         Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
-        For tabular information return it as an html table. Do not return markdown format.
-        Each source has a name followed by colon and the actual information, always include the source name for each fact you use in the response. Use square brakets to reference the source, e.g. [info1.txt]. Don't combine sources, list each source separately, e.g. [info1.txt][info2.pdf].
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
         {follow_up_questions_prompt}
         {injected_prompt}
         Sources:
@@ -84,11 +85,11 @@ class ChatReadRetrieveReadApproach(Approach):
         """
 
     prompt_prefix_no_content = """<|im_start|>system
-        Assistant helps the company employees extracting information from uploaded invoices and providing answers related to the extracted data, performing basic calculations, creating images according to the user input, and also answering their questions about everything.
-        If the user asks if the assistant can extract data from invoices, tell him you can but he needs to upload them in case they have not already. In this case do not include any citation.
-        Be brief in your answers.
-        If there isn't enough information below, say you don't know. If asking a clarifying question to the user would help, ask the question.
-        For tabular information return it as an html table. Do not return markdown format. 
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be brief in your answers. 
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
         {injected_prompt}
         <|im_end|>
         {chat_history}
@@ -99,19 +100,104 @@ class ChatReadRetrieveReadApproach(Approach):
         Try not to repeat questions that have already been asked.
         Only generate questions and do not generate any text before or after the questions, such as 'Next Questions'"""
 
-    query_prompt_template = """Below is a history of the conversation so far, and a new question asked by the user that needs to be answered. The answer should be based on your knowledge base or in a given function execution.
+    query_prompt_template = """Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
         Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
-        Do not include cited source filenames and document names e.g info.txt or doc.pdf in the search query terms.
-        Do not include any text inside [] or <<>> in the search query terms.
         If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": ,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
 
         Chat History:
         {chat_history}
+
+        {examples}
 
         Question:
         {question}
 
         Search query:
+        """
+
+    query_examples = """
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
         """
 
     sentimental_analysis_base_prompt = """Based on the following conversation, analyze the user statements and perform a sentimental analysis on them. Classify the user conversation from 1 to 10 where 1 is very negative, 5 is neutral and 10 is very positive.
@@ -428,6 +514,7 @@ class ChatReadRetrieveReadApproach(Approach):
             chat_history=self.get_chat_history_as_text(
                 self.m_history, include_last_turn=False
             ),
+            examples=self.query_examples,
             question=self.m_history[-1]["user"],
         )
         logger.debug(f"prompt: {prompt}")
@@ -435,7 +522,7 @@ class ChatReadRetrieveReadApproach(Approach):
         completion = openai.completions.create(
             model=self.gpt_deployment,
             prompt=prompt,
-            max_tokens=32,
+            max_tokens=256,
             n=1,
         )
 
@@ -595,6 +682,7 @@ class ChatReadRetrieveReadApproach(Approach):
 
         completion = openai.completions.create(
             model=self.gpt_deployment,
+            temperature=0.7,
             prompt=prompt,
             max_tokens=1024,
             n=1,
@@ -640,30 +728,33 @@ class ChatReadRetrieveReadApproach(Approach):
             return data
 
         optimized_query = self.generate_optimized_query()
+        content = ""
 
-        # if optimized_query != "":
-        #     logger.debug("optimized_query is not empty: " + optimized_query)
-        #     (
-        #         content,
-        #         follow_up_questions_prompt,
-        #         results,
-        #     ) = self.retrieve_relevant_documents(optimized_query=optimized_query)
-        # else:
-        #     logger.debug("optimized_query is empty")
-        #     content = "No sources found."
-        #     follow_up_questions_prompt = ""
-        #     results = []
+        if optimized_query != "":
+            logger.debug("optimized_query is not empty: " + optimized_query)
+            optimized_query = json.loads(optimized_query)
+            results = solr_requests.get_procedural_queries(optimized_query)
+            logger.debug("results")
+            logger.debug(results)
+            for result in results:
+                content += json.dumps(result) + "\n"
+            logger.debug("content")
+            logger.debug(content)
+            follow_up_questions_prompt = ""
+        else:
+            logger.debug("optimized_query is empty")
+            content = "No sources found."
+            follow_up_questions_prompt = ""
+            results = []
 
-        prompt = self.prompt_injection(
-            content="No sources found.", follow_up_questions_prompt=""
-        )
+        prompt = self.prompt_injection(content=content, follow_up_questions_prompt="")
 
         answer = self.generate_contextual_answer(prompt=prompt)
 
         logger.debug("answer")
         logger.debug(answer)
         logger.debug("results")
-        # logger.debug(results)
+        logger.debug(results)
         logger.debug(PROMPT_LABEL)
         logger.debug(prompt)
         logger.debug("content")

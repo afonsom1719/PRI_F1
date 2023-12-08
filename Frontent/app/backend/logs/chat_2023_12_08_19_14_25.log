@@ -1,0 +1,2798 @@
+2023-12-08 19:14:25,832 - WARNING - _internal.py - _log - line 96 -  * Debugger is active!
+2023-12-08 19:14:25,840 - INFO - _internal.py - _log - line 96 -  * Debugger PIN: 232-792-731
+2023-12-08 19:15:37,996 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:15:37] "GET / HTTP/1.1" 200 -
+2023-12-08 19:15:38,026 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:15:38] "[36mGET /assets/index-6ElAx5HV.js HTTP/1.1[0m" 304 -
+2023-12-08 19:15:38,027 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:15:38] "[36mGET /assets/index-oYYtWWvi.css HTTP/1.1[0m" 304 -
+2023-12-08 19:15:49,826 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:15:49,828 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:15:49,828 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:15:49,828 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:15:49,828 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'What is the valtteri bottas id?'}]
+2023-12-08 19:15:49,828 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:15:49,828 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:15:49,828 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:15:49,828 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:15:49,828 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: What is the valtteri bottas id?
+2023-12-08 19:15:51,874 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:15:51,874 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:15:51,875 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:15:51,875 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:15:51,875 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        What is the valtteri bottas id?
+
+        Search query:
+        
+2023-12-08 19:15:53,694 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "drivers",
+            "query1": "fl=driverId,forename,surname&indent=true&q.op=OR&q=forename%3Avaltteri%20surname%3ABottas&rows=1&useParams="
+        }
+2023-12-08 19:15:53,695 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:15:53,695 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "drivers",
+            "query1": "fl=driverId,forename,surname&indent=true&q.op=OR&q=forename%3Avaltteri%20surname%3ABottas&rows=1&useParams="
+        }
+2023-12-08 19:15:53,695 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "drivers",
+            "query1": "fl=driverId,forename,surname&indent=true&q.op=OR&q=forename%3Avaltteri%20surname%3ABottas&rows=1&useParams="
+        }
+2023-12-08 19:15:53,695 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/drivers/select?fl=driverId,forename,surname&indent=true&q.op=OR&q=forename%3Avaltteri%20surname%3ABottas&rows=1&useParams=
+2023-12-08 19:15:53,781 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:15:53,795 - DEBUG - chatreadretrieveread.py - run - line 737 - results
+2023-12-08 19:15:53,795 - DEBUG - chatreadretrieveread.py - run - line 738 - [[{'driverId': 822, 'forename': 'Valtteri', 'surname': 'Bottas'}]]
+2023-12-08 19:15:53,795 - DEBUG - chatreadretrieveread.py - run - line 741 - content
+2023-12-08 19:15:53,795 - DEBUG - chatreadretrieveread.py - run - line 742 - [{"driverId": 822, "forename": "Valtteri", "surname": "Bottas"}]
+
+2023-12-08 19:15:53,795 - DEBUG - chatreadretrieveread.py - prompt_injection - line 628 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:15:53,795 - DEBUG - chatreadretrieveread.py - prompt_injection - line 639 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:15:53,795 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 679 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:15:54,350 - DEBUG - chatreadretrieveread.py - run - line 754 - answer
+2023-12-08 19:15:54,350 - DEBUG - chatreadretrieveread.py - run - line 755 -  Valtteri Bottas' id is 822.
+2023-12-08 19:15:54,350 - DEBUG - chatreadretrieveread.py - run - line 756 - results
+2023-12-08 19:15:54,350 - DEBUG - chatreadretrieveread.py - run - line 757 - [[{'driverId': 822, 'forename': 'Valtteri', 'surname': 'Bottas'}]]
+2023-12-08 19:15:54,351 - DEBUG - chatreadretrieveread.py - run - line 758 - prompt
+2023-12-08 19:15:54,351 - DEBUG - chatreadretrieveread.py - run - line 759 - <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        
+        
+        Sources:
+        [{"driverId": 822, "forename": "Valtteri", "surname": "Bottas"}]
+
+        <|im_end|>
+        <|im_start|>user
+What is the valtteri bottas id?
+<|im_end|>
+<|im_start|>assistant
+
+
+        
+2023-12-08 19:15:54,351 - DEBUG - chatreadretrieveread.py - run - line 760 - content
+2023-12-08 19:15:54,352 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:15:54] "POST /chat HTTP/1.1" 200 -
+2023-12-08 19:16:13,974 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:16:13,976 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:16:13,976 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:16:13,976 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:16:13,976 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'What is the valtteri bottas id?', 'bot': " Valtteri Bottas' id is 822."}, {'user': 'And what is the Portugal 2021 race id?'}]
+2023-12-08 19:16:13,976 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:16:13,976 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:16:13,976 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:16:13,976 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:16:13,976 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: And what is the Portugal 2021 race id?
+2023-12-08 19:16:15,600 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:16:15,601 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:16:15,601 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:16:15,601 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:16:15,601 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        <|im_start|>user
+What is the valtteri bottas id?
+<|im_end|>
+<|im_start|>assistant
+ Valtteri Bottas' id is 822.<|im_end|>
+
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        And what is the Portugal 2021 race id?
+
+        Search query:
+        
+2023-12-08 19:16:17,702 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "races",
+            "query1": "fl=raceId&fq=name%3APortugal&fq=year%3A2021&indent=true&q.op=OR&q=*%3A*&rows=1&useParams="
+        }
+2023-12-08 19:16:17,703 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:16:17,703 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "races",
+            "query1": "fl=raceId&fq=name%3APortugal&fq=year%3A2021&indent=true&q.op=OR&q=*%3A*&rows=1&useParams="
+        }
+2023-12-08 19:16:17,703 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "races",
+            "query1": "fl=raceId&fq=name%3APortugal&fq=year%3A2021&indent=true&q.op=OR&q=*%3A*&rows=1&useParams="
+        }
+2023-12-08 19:16:17,703 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/races/select?fl=raceId&fq=name%3APortugal&fq=year%3A2021&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=
+2023-12-08 19:16:17,732 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:16:17,746 - DEBUG - chatreadretrieveread.py - run - line 737 - results
+2023-12-08 19:16:17,746 - DEBUG - chatreadretrieveread.py - run - line 738 - [[{'raceId': 1054}]]
+2023-12-08 19:16:17,746 - DEBUG - chatreadretrieveread.py - run - line 741 - content
+2023-12-08 19:16:17,746 - DEBUG - chatreadretrieveread.py - run - line 742 - [{"raceId": 1054}]
+
+2023-12-08 19:16:17,746 - DEBUG - chatreadretrieveread.py - prompt_injection - line 628 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:16:17,746 - DEBUG - chatreadretrieveread.py - prompt_injection - line 639 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:16:17,746 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 679 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:16:18,386 - DEBUG - chatreadretrieveread.py - run - line 754 - answer
+2023-12-08 19:16:18,386 - DEBUG - chatreadretrieveread.py - run - line 755 -  The race id for the Portugal 2021 is 1054.
+2023-12-08 19:16:18,386 - DEBUG - chatreadretrieveread.py - run - line 756 - results
+2023-12-08 19:16:18,386 - DEBUG - chatreadretrieveread.py - run - line 757 - [[{'raceId': 1054}]]
+2023-12-08 19:16:18,386 - DEBUG - chatreadretrieveread.py - run - line 758 - prompt
+2023-12-08 19:16:18,386 - DEBUG - chatreadretrieveread.py - run - line 759 - <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        
+        
+        Sources:
+        [{"raceId": 1054}]
+
+        <|im_end|>
+        <|im_start|>user
+What is the valtteri bottas id?
+<|im_end|>
+<|im_start|>assistant
+ Valtteri Bottas' id is 822.<|im_end|>
+<|im_start|>user
+And what is the Portugal 2021 race id?
+<|im_end|>
+<|im_start|>assistant
+
+
+        
+2023-12-08 19:16:18,386 - DEBUG - chatreadretrieveread.py - run - line 760 - content
+2023-12-08 19:16:18,387 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:16:18] "POST /chat HTTP/1.1" 200 -
+2023-12-08 19:16:43,221 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:16:43,222 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:16:43,222 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:16:43,222 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:16:43,222 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'What is the valtteri bottas id?', 'bot': " Valtteri Bottas' id is 822."}, {'user': 'And what is the Portugal 2021 race id?', 'bot': ' The race id for the Portugal 2021 is 1054.'}, {'user': 'Then what was valtteri bettas fastest lap in Portugal 2021?'}]
+2023-12-08 19:16:43,222 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:16:43,222 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:16:43,222 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:16:43,222 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:16:43,222 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: Then what was valtteri bettas fastest lap in Portugal 2021?
+2023-12-08 19:16:45,346 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:16:45,346 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:16:45,346 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:16:45,346 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:16:45,346 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        <|im_start|>user
+What is the valtteri bottas id?
+<|im_end|>
+<|im_start|>assistant
+ Valtteri Bottas' id is 822.<|im_end|>
+<|im_start|>user
+And what is the Portugal 2021 race id?
+<|im_end|>
+<|im_start|>assistant
+ The race id for the Portugal 2021 is 1054.<|im_end|>
+
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        Then what was valtteri bettas fastest lap in Portugal 2021?
+
+        Search query:
+        
+2023-12-08 19:16:50,410 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3AValtteri&fq=surname%3ABottas&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3APortugal%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2021&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A822&fq=raceId%3A1054&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 19:16:50,411 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:16:50,411 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3AValtteri&fq=surname%3ABottas&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3APortugal%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2021&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A822&fq=raceId%3A1054&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 19:16:50,411 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3AValtteri&fq=surname%3ABottas&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3APortugal%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2021&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A822&fq=raceId%3A1054&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 19:16:50,411 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/drivers/select?fl=driverId,forename,surname&fq=forename%3AValtteri&fq=surname%3ABottas&indent=true&q.op=OR&q=*%3A*&useParams=
+2023-12-08 19:16:50,445 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:16:50,467 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/races/select?fl=raceId,name&fq=name%3APortugal%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2021&rows=1&useParams=
+2023-12-08 19:16:50,486 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:16:50,501 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/lap_times/select?fl=milliseconds&fq=driverId%3A822&fq=raceId%3A1054&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams=
+2023-12-08 19:16:50,513 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:16:50,523 - DEBUG - chatreadretrieveread.py - run - line 737 - results
+2023-12-08 19:16:50,523 - DEBUG - chatreadretrieveread.py - run - line 738 - [[{'driverId': 822, 'forename': 'Valtteri', 'surname': 'Bottas'}], [{'raceId': 1054, 'name': 'Portuguese Grand Prix'}], [{'milliseconds': 79865}]]
+2023-12-08 19:16:50,523 - DEBUG - chatreadretrieveread.py - run - line 741 - content
+2023-12-08 19:16:50,523 - DEBUG - chatreadretrieveread.py - run - line 742 - [{"driverId": 822, "forename": "Valtteri", "surname": "Bottas"}]
+[{"raceId": 1054, "name": "Portuguese Grand Prix"}]
+[{"milliseconds": 79865}]
+
+2023-12-08 19:16:50,523 - DEBUG - chatreadretrieveread.py - prompt_injection - line 628 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:16:50,523 - DEBUG - chatreadretrieveread.py - prompt_injection - line 639 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:16:50,523 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 679 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:16:54,268 - DEBUG - chatreadretrieveread.py - run - line 754 - answer
+2023-12-08 19:16:54,268 - DEBUG - chatreadretrieveread.py - run - line 755 -  Valtteri Bottas' fastest lap in Portugal 2021 was 79.865 seconds.
+2023-12-08 19:16:54,268 - DEBUG - chatreadretrieveread.py - run - line 756 - results
+2023-12-08 19:16:54,268 - DEBUG - chatreadretrieveread.py - run - line 757 - [[{'driverId': 822, 'forename': 'Valtteri', 'surname': 'Bottas'}], [{'raceId': 1054, 'name': 'Portuguese Grand Prix'}], [{'milliseconds': 79865}]]
+2023-12-08 19:16:54,268 - DEBUG - chatreadretrieveread.py - run - line 758 - prompt
+2023-12-08 19:16:54,268 - DEBUG - chatreadretrieveread.py - run - line 759 - <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        
+        
+        Sources:
+        [{"driverId": 822, "forename": "Valtteri", "surname": "Bottas"}]
+[{"raceId": 1054, "name": "Portuguese Grand Prix"}]
+[{"milliseconds": 79865}]
+
+        <|im_end|>
+        <|im_start|>user
+What is the valtteri bottas id?
+<|im_end|>
+<|im_start|>assistant
+ Valtteri Bottas' id is 822.<|im_end|>
+<|im_start|>user
+And what is the Portugal 2021 race id?
+<|im_end|>
+<|im_start|>assistant
+ The race id for the Portugal 2021 is 1054.<|im_end|>
+<|im_start|>user
+Then what was valtteri bettas fastest lap in Portugal 2021?
+<|im_end|>
+<|im_start|>assistant
+
+
+        
+2023-12-08 19:16:54,268 - DEBUG - chatreadretrieveread.py - run - line 760 - content
+2023-12-08 19:16:54,269 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:16:54] "POST /chat HTTP/1.1" 200 -
+2023-12-08 19:18:33,837 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:18:33] "GET / HTTP/1.1" 200 -
+2023-12-08 19:18:33,864 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:18:33] "[36mGET /assets/index-6ElAx5HV.js HTTP/1.1[0m" 304 -
+2023-12-08 19:18:33,864 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:18:33] "[36mGET /assets/index-oYYtWWvi.css HTTP/1.1[0m" 304 -
+2023-12-08 19:18:36,519 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:18:36,520 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:18:36,520 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:18:36,520 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:18:36,520 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'Name some drivers with the surname Schumacher.'}]
+2023-12-08 19:18:36,520 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:18:36,520 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:18:36,520 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:18:36,520 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:18:36,520 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: Name some drivers with the surname Schumacher.
+2023-12-08 19:18:40,669 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:18:40,669 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:18:40,669 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:18:40,669 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:18:40,669 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        Name some drivers with the surname Schumacher.
+
+        Search query:
+        
+2023-12-08 19:18:42,179 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "drivers",
+            "query1": "fl=forename,surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+2023-12-08 19:18:42,180 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:18:42,180 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "drivers",
+            "query1": "fl=forename,surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+2023-12-08 19:18:42,180 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "drivers",
+            "query1": "fl=forename,surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+2023-12-08 19:18:42,180 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/drivers/select?fl=forename,surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams=
+2023-12-08 19:18:42,219 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:18:42,234 - DEBUG - chatreadretrieveread.py - run - line 737 - results
+2023-12-08 19:18:42,234 - DEBUG - chatreadretrieveread.py - run - line 738 - [[{'forename': 'Ralf', 'surname': 'Schumacher'}, {'forename': 'Michael', 'surname': 'Schumacher'}, {'forename': 'Mick', 'surname': 'Schumacher'}, {'forename': 'Vern', 'surname': 'Schuppan'}]]
+2023-12-08 19:18:42,234 - DEBUG - chatreadretrieveread.py - run - line 741 - content
+2023-12-08 19:18:42,234 - DEBUG - chatreadretrieveread.py - run - line 742 - [{"forename": "Ralf", "surname": "Schumacher"}, {"forename": "Michael", "surname": "Schumacher"}, {"forename": "Mick", "surname": "Schumacher"}, {"forename": "Vern", "surname": "Schuppan"}]
+
+2023-12-08 19:18:42,234 - DEBUG - chatreadretrieveread.py - prompt_injection - line 628 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:18:42,234 - DEBUG - chatreadretrieveread.py - prompt_injection - line 639 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:18:42,234 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 679 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:18:43,158 - DEBUG - chatreadretrieveread.py - run - line 754 - answer
+2023-12-08 19:18:43,158 - DEBUG - chatreadretrieveread.py - run - line 755 -  There are four drivers with the surname Schumacher: 
+         Ralf Schumacher, Michael Schumacher, Mick Schumacher, and Vern Schuppan.
+2023-12-08 19:18:43,158 - DEBUG - chatreadretrieveread.py - run - line 756 - results
+2023-12-08 19:18:43,158 - DEBUG - chatreadretrieveread.py - run - line 757 - [[{'forename': 'Ralf', 'surname': 'Schumacher'}, {'forename': 'Michael', 'surname': 'Schumacher'}, {'forename': 'Mick', 'surname': 'Schumacher'}, {'forename': 'Vern', 'surname': 'Schuppan'}]]
+2023-12-08 19:18:43,158 - DEBUG - chatreadretrieveread.py - run - line 758 - prompt
+2023-12-08 19:18:43,159 - DEBUG - chatreadretrieveread.py - run - line 759 - <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        
+        
+        Sources:
+        [{"forename": "Ralf", "surname": "Schumacher"}, {"forename": "Michael", "surname": "Schumacher"}, {"forename": "Mick", "surname": "Schumacher"}, {"forename": "Vern", "surname": "Schuppan"}]
+
+        <|im_end|>
+        <|im_start|>user
+Name some drivers with the surname Schumacher.
+<|im_end|>
+<|im_start|>assistant
+
+
+        
+2023-12-08 19:18:43,159 - DEBUG - chatreadretrieveread.py - run - line 760 - content
+2023-12-08 19:18:43,159 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:18:43] "POST /chat HTTP/1.1" 200 -
+2023-12-08 19:19:37,584 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:19:37] "GET / HTTP/1.1" 200 -
+2023-12-08 19:19:37,613 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:19:37] "[36mGET /assets/index-6ElAx5HV.js HTTP/1.1[0m" 304 -
+2023-12-08 19:19:37,614 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:19:37] "[36mGET /assets/index-oYYtWWvi.css HTTP/1.1[0m" 304 -
+2023-12-08 19:19:46,972 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:19:46,973 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:19:46,973 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:19:46,973 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:19:46,973 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'Give me 5 circuits located in Italy.'}]
+2023-12-08 19:19:46,973 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:19:46,973 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:19:46,973 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:19:46,973 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:19:46,973 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: Give me 5 circuits located in Italy.
+2023-12-08 19:19:54,791 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:19:54,793 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:19:54,793 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:19:54,793 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:19:54,793 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        Give me 5 circuits located in Italy.
+
+        Search query:
+        
+2023-12-08 19:19:56,002 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&useParams="
+        }
+2023-12-08 19:19:56,002 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:19:56,002 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&useParams="
+        }
+2023-12-08 19:19:56,002 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&useParams="
+        }
+2023-12-08 19:19:56,002 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/circuits/select?fl=name&indent=true&q.op=OR&q=country%3AItaly&useParams=
+2023-12-08 19:19:56,025 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:19:56,043 - DEBUG - chatreadretrieveread.py - run - line 737 - results
+2023-12-08 19:19:56,044 - DEBUG - chatreadretrieveread.py - run - line 738 - [[{'name': 'Autodromo Nazionale di Monza'}, {'name': 'Autodromo Enzo e Dino Ferrari'}, {'name': 'Pescara Circuit'}, {'name': 'Autodromo Internazionale del Mugello'}]]
+2023-12-08 19:19:56,044 - DEBUG - chatreadretrieveread.py - run - line 741 - content
+2023-12-08 19:19:56,044 - DEBUG - chatreadretrieveread.py - run - line 742 - [{"name": "Autodromo Nazionale di Monza"}, {"name": "Autodromo Enzo e Dino Ferrari"}, {"name": "Pescara Circuit"}, {"name": "Autodromo Internazionale del Mugello"}]
+
+2023-12-08 19:19:56,044 - DEBUG - chatreadretrieveread.py - prompt_injection - line 628 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:19:56,044 - DEBUG - chatreadretrieveread.py - prompt_injection - line 639 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:19:56,044 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 679 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:19:57,239 - DEBUG - chatreadretrieveread.py - run - line 754 - answer
+2023-12-08 19:19:57,239 - DEBUG - chatreadretrieveread.py - run - line 755 -  Sure, I can provide you with 5 circuits located in Italy. They are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, Autodromo Internazionale del Mugello.
+2023-12-08 19:19:57,239 - DEBUG - chatreadretrieveread.py - run - line 756 - results
+2023-12-08 19:19:57,239 - DEBUG - chatreadretrieveread.py - run - line 757 - [[{'name': 'Autodromo Nazionale di Monza'}, {'name': 'Autodromo Enzo e Dino Ferrari'}, {'name': 'Pescara Circuit'}, {'name': 'Autodromo Internazionale del Mugello'}]]
+2023-12-08 19:19:57,239 - DEBUG - chatreadretrieveread.py - run - line 758 - prompt
+2023-12-08 19:19:57,240 - DEBUG - chatreadretrieveread.py - run - line 759 - <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        
+        
+        Sources:
+        [{"name": "Autodromo Nazionale di Monza"}, {"name": "Autodromo Enzo e Dino Ferrari"}, {"name": "Pescara Circuit"}, {"name": "Autodromo Internazionale del Mugello"}]
+
+        <|im_end|>
+        <|im_start|>user
+Give me 5 circuits located in Italy.
+<|im_end|>
+<|im_start|>assistant
+
+
+        
+2023-12-08 19:19:57,240 - DEBUG - chatreadretrieveread.py - run - line 760 - content
+2023-12-08 19:19:57,240 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:19:57] "POST /chat HTTP/1.1" 200 -
+2023-12-08 19:20:22,473 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:20:22,473 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:20:22,473 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:20:22,473 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:20:22,473 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'Give me 5 circuits located in Italy.', 'bot': ' Sure, I can provide you with 5 circuits located in Italy. They are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, Autodromo Internazionale del Mugello.'}, {'user': 'Then what was the fastest lap ever in Mugello'}]
+2023-12-08 19:20:22,473 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:20:22,474 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:20:22,474 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:20:22,474 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:20:22,474 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: Then what was the fastest lap ever in Mugello
+2023-12-08 19:20:24,579 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:20:24,579 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:20:24,579 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:20:24,579 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:20:24,579 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        <|im_start|>user
+Give me 5 circuits located in Italy.
+<|im_end|>
+<|im_start|>assistant
+ Sure, I can provide you with 5 circuits located in Italy. They are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, Autodromo Internazionale del Mugello.<|im_end|>
+
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        Then what was the fastest lap ever in Mugello
+
+        Search query:
+        
+2023-12-08 19:20:27,349 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "circuits",
+            "core2": "lap_times",
+            "query1": "fl=circuitId&fq=name%3AMugello&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=",
+            "query2": "fl=driverId,milliseconds&fq=circuitId%3A8&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 19:20:27,349 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:20:27,350 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "circuits",
+            "core2": "lap_times",
+            "query1": "fl=circuitId&fq=name%3AMugello&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=",
+            "query2": "fl=driverId,milliseconds&fq=circuitId%3A8&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 19:20:27,350 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "circuits",
+            "core2": "lap_times",
+            "query1": "fl=circuitId&fq=name%3AMugello&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=",
+            "query2": "fl=driverId,milliseconds&fq=circuitId%3A8&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 19:20:27,350 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/circuits/select?fl=circuitId&fq=name%3AMugello&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=
+2023-12-08 19:20:27,391 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:20:27,407 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/lap_times/select?fl=driverId,milliseconds&fq=circuitId%3A8&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams=
+2023-12-08 19:20:27,423 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [400]>
+2023-12-08 19:20:27,435 - ERROR - app.py - chat - line 184 - Exception in /chat
+Traceback (most recent call last):
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/./app.py", line 181, in chat
+    r = impl.run(request.json["history"], request.json.get("overrides") or {}, request.json.get("language") or "English")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py", line 736, in run
+    results = solr_requests.get_procedural_queries(optimized_query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/utils/solr_requests.py", line 32, in get_procedural_queries
+    results.append(result["response"]["docs"])
+                   ~~~~~~^^^^^^^^^^^^
+KeyError: 'response'
+2023-12-08 19:20:27,439 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:20:27] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2023-12-08 19:21:47,380 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:21:47] "GET / HTTP/1.1" 200 -
+2023-12-08 19:21:47,408 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:21:47] "[36mGET /assets/index-6ElAx5HV.js HTTP/1.1[0m" 304 -
+2023-12-08 19:21:47,409 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:21:47] "[36mGET /assets/index-oYYtWWvi.css HTTP/1.1[0m" 304 -
+2023-12-08 19:21:48,872 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:21:48,872 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:21:48,872 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:21:48,872 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:21:48,872 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'Give me 5 circuits located in Italy.'}]
+2023-12-08 19:21:48,873 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:21:48,873 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:21:48,873 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:21:48,873 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:21:48,873 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: Give me 5 circuits located in Italy.
+2023-12-08 19:21:57,913 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:21:57,914 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:21:57,914 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:21:57,914 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:21:57,914 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        Give me 5 circuits located in Italy.
+
+        Search query:
+        
+2023-12-08 19:21:59,213 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&rows=5&useParams="
+        }
+2023-12-08 19:21:59,213 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:21:59,213 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&rows=5&useParams="
+        }
+2023-12-08 19:21:59,213 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&rows=5&useParams="
+        }
+2023-12-08 19:21:59,214 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/circuits/select?fl=name&indent=true&q.op=OR&q=country%3AItaly&rows=5&useParams=
+2023-12-08 19:21:59,249 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:21:59,267 - DEBUG - chatreadretrieveread.py - run - line 737 - results
+2023-12-08 19:21:59,267 - DEBUG - chatreadretrieveread.py - run - line 738 - [[{'name': 'Autodromo Nazionale di Monza'}, {'name': 'Autodromo Enzo e Dino Ferrari'}, {'name': 'Pescara Circuit'}, {'name': 'Autodromo Internazionale del Mugello'}]]
+2023-12-08 19:21:59,267 - DEBUG - chatreadretrieveread.py - run - line 741 - content
+2023-12-08 19:21:59,267 - DEBUG - chatreadretrieveread.py - run - line 742 - [{"name": "Autodromo Nazionale di Monza"}, {"name": "Autodromo Enzo e Dino Ferrari"}, {"name": "Pescara Circuit"}, {"name": "Autodromo Internazionale del Mugello"}]
+
+2023-12-08 19:21:59,267 - DEBUG - chatreadretrieveread.py - prompt_injection - line 628 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:21:59,267 - DEBUG - chatreadretrieveread.py - prompt_injection - line 639 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:21:59,267 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 679 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:22:00,520 - DEBUG - chatreadretrieveread.py - run - line 754 - answer
+2023-12-08 19:22:00,520 - DEBUG - chatreadretrieveread.py - run - line 755 -  The five circuits located in Italy are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, and Autodromo Internazionale del Mugello.
+2023-12-08 19:22:00,520 - DEBUG - chatreadretrieveread.py - run - line 756 - results
+2023-12-08 19:22:00,520 - DEBUG - chatreadretrieveread.py - run - line 757 - [[{'name': 'Autodromo Nazionale di Monza'}, {'name': 'Autodromo Enzo e Dino Ferrari'}, {'name': 'Pescara Circuit'}, {'name': 'Autodromo Internazionale del Mugello'}]]
+2023-12-08 19:22:00,520 - DEBUG - chatreadretrieveread.py - run - line 758 - prompt
+2023-12-08 19:22:00,520 - DEBUG - chatreadretrieveread.py - run - line 759 - <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        
+        
+        Sources:
+        [{"name": "Autodromo Nazionale di Monza"}, {"name": "Autodromo Enzo e Dino Ferrari"}, {"name": "Pescara Circuit"}, {"name": "Autodromo Internazionale del Mugello"}]
+
+        <|im_end|>
+        <|im_start|>user
+Give me 5 circuits located in Italy.
+<|im_end|>
+<|im_start|>assistant
+
+
+        
+2023-12-08 19:22:00,520 - DEBUG - chatreadretrieveread.py - run - line 760 - content
+2023-12-08 19:22:00,521 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:22:00] "POST /chat HTTP/1.1" 200 -
+2023-12-08 19:23:15,091 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:23:15,093 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:23:15,093 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:23:15,093 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:23:15,093 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'Give me 5 circuits located in Italy.', 'bot': ' The five circuits located in Italy are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, and Autodromo Internazionale del Mugello.'}, {'user': 'Was there a race in Monza in the 2021 and if so what was the race Id?'}]
+2023-12-08 19:23:15,093 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:23:15,093 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:23:15,093 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:23:15,093 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:23:15,093 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: Was there a race in Monza in the 2021 and if so what was the race Id?
+2023-12-08 19:23:17,172 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:23:17,173 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:23:17,173 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:23:17,173 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:23:17,173 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        <|im_start|>user
+Give me 5 circuits located in Italy.
+<|im_end|>
+<|im_start|>assistant
+ The five circuits located in Italy are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, and Autodromo Internazionale del Mugello.<|im_end|>
+
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        Was there a race in Monza in the 2021 and if so what was the race Id?
+
+        Search query:
+        
+2023-12-08 19:23:19,908 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "races",
+            "core2": "circuits",
+            "query1": "fl=name,raceId,year&indent=true&q.op=OR&q=year%3A2021&rows=10&useParams=",
+            "query2": "fl=name,circuitId&indent=true&q.op=OR&q=name%3AMonza&rows=1&useParams="
+        }
+2023-12-08 19:23:19,908 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:23:19,908 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "races",
+            "core2": "circuits",
+            "query1": "fl=name,raceId,year&indent=true&q.op=OR&q=year%3A2021&rows=10&useParams=",
+            "query2": "fl=name,circuitId&indent=true&q.op=OR&q=name%3AMonza&rows=1&useParams="
+        }
+2023-12-08 19:23:19,908 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "races",
+            "core2": "circuits",
+            "query1": "fl=name,raceId,year&indent=true&q.op=OR&q=year%3A2021&rows=10&useParams=",
+            "query2": "fl=name,circuitId&indent=true&q.op=OR&q=name%3AMonza&rows=1&useParams="
+        }
+2023-12-08 19:23:19,908 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/races/select?fl=name,raceId,year&indent=true&q.op=OR&q=year%3A2021&rows=10&useParams=
+2023-12-08 19:23:19,951 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:23:19,971 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/circuits/select?fl=name,circuitId&indent=true&q.op=OR&q=name%3AMonza&rows=1&useParams=
+2023-12-08 19:23:19,984 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:23:19,995 - DEBUG - chatreadretrieveread.py - run - line 737 - results
+2023-12-08 19:23:19,995 - DEBUG - chatreadretrieveread.py - run - line 738 - [[{'raceId': 1053, 'year': '2021', 'name': 'Emilia Romagna Grand Prix'}, {'raceId': 1052, 'year': '2021', 'name': 'Bahrain Grand Prix'}, {'raceId': 1051, 'year': '2021', 'name': 'Qatar Grand Prix'}, {'raceId': 1054, 'year': '2021', 'name': 'Portuguese Grand Prix'}, {'raceId': 1055, 'year': '2021', 'name': 'Spanish Grand Prix'}, {'raceId': 1056, 'year': '2021', 'name': 'Monaco Grand Prix'}, {'raceId': 1057, 'year': '2021', 'name': 'Azerbaijan Grand Prix'}, {'raceId': 1058, 'year': '2021', 'name': 'Styrian Grand Prix'}, {'raceId': 1059, 'year': '2021', 'name': 'French Grand Prix'}, {'raceId': 1060, 'year': '2021', 'name': 'Austrian Grand Prix'}], [{'circuitId': 14, 'name': 'Autodromo Nazionale di Monza'}]]
+2023-12-08 19:23:19,996 - DEBUG - chatreadretrieveread.py - run - line 741 - content
+2023-12-08 19:23:19,996 - DEBUG - chatreadretrieveread.py - run - line 742 - [{"raceId": 1053, "year": "2021", "name": "Emilia Romagna Grand Prix"}, {"raceId": 1052, "year": "2021", "name": "Bahrain Grand Prix"}, {"raceId": 1051, "year": "2021", "name": "Qatar Grand Prix"}, {"raceId": 1054, "year": "2021", "name": "Portuguese Grand Prix"}, {"raceId": 1055, "year": "2021", "name": "Spanish Grand Prix"}, {"raceId": 1056, "year": "2021", "name": "Monaco Grand Prix"}, {"raceId": 1057, "year": "2021", "name": "Azerbaijan Grand Prix"}, {"raceId": 1058, "year": "2021", "name": "Styrian Grand Prix"}, {"raceId": 1059, "year": "2021", "name": "French Grand Prix"}, {"raceId": 1060, "year": "2021", "name": "Austrian Grand Prix"}]
+[{"circuitId": 14, "name": "Autodromo Nazionale di Monza"}]
+
+2023-12-08 19:23:19,996 - DEBUG - chatreadretrieveread.py - prompt_injection - line 628 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:23:19,996 - DEBUG - chatreadretrieveread.py - prompt_injection - line 639 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:23:19,996 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 679 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:23:20,828 - DEBUG - chatreadretrieveread.py - run - line 754 - answer
+2023-12-08 19:23:20,828 - DEBUG - chatreadretrieveread.py - run - line 755 -  Yes, there was a race in Monza in 2021. The race ID for this race was 1056.
+2023-12-08 19:23:20,828 - DEBUG - chatreadretrieveread.py - run - line 756 - results
+2023-12-08 19:23:20,828 - DEBUG - chatreadretrieveread.py - run - line 757 - [[{'raceId': 1053, 'year': '2021', 'name': 'Emilia Romagna Grand Prix'}, {'raceId': 1052, 'year': '2021', 'name': 'Bahrain Grand Prix'}, {'raceId': 1051, 'year': '2021', 'name': 'Qatar Grand Prix'}, {'raceId': 1054, 'year': '2021', 'name': 'Portuguese Grand Prix'}, {'raceId': 1055, 'year': '2021', 'name': 'Spanish Grand Prix'}, {'raceId': 1056, 'year': '2021', 'name': 'Monaco Grand Prix'}, {'raceId': 1057, 'year': '2021', 'name': 'Azerbaijan Grand Prix'}, {'raceId': 1058, 'year': '2021', 'name': 'Styrian Grand Prix'}, {'raceId': 1059, 'year': '2021', 'name': 'French Grand Prix'}, {'raceId': 1060, 'year': '2021', 'name': 'Austrian Grand Prix'}], [{'circuitId': 14, 'name': 'Autodromo Nazionale di Monza'}]]
+2023-12-08 19:23:20,828 - DEBUG - chatreadretrieveread.py - run - line 758 - prompt
+2023-12-08 19:23:20,829 - DEBUG - chatreadretrieveread.py - run - line 759 - <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        
+        
+        Sources:
+        [{"raceId": 1053, "year": "2021", "name": "Emilia Romagna Grand Prix"}, {"raceId": 1052, "year": "2021", "name": "Bahrain Grand Prix"}, {"raceId": 1051, "year": "2021", "name": "Qatar Grand Prix"}, {"raceId": 1054, "year": "2021", "name": "Portuguese Grand Prix"}, {"raceId": 1055, "year": "2021", "name": "Spanish Grand Prix"}, {"raceId": 1056, "year": "2021", "name": "Monaco Grand Prix"}, {"raceId": 1057, "year": "2021", "name": "Azerbaijan Grand Prix"}, {"raceId": 1058, "year": "2021", "name": "Styrian Grand Prix"}, {"raceId": 1059, "year": "2021", "name": "French Grand Prix"}, {"raceId": 1060, "year": "2021", "name": "Austrian Grand Prix"}]
+[{"circuitId": 14, "name": "Autodromo Nazionale di Monza"}]
+
+        <|im_end|>
+        <|im_start|>user
+Give me 5 circuits located in Italy.
+<|im_end|>
+<|im_start|>assistant
+ The five circuits located in Italy are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, and Autodromo Internazionale del Mugello.<|im_end|>
+<|im_start|>user
+Was there a race in Monza in the 2021 and if so what was the race Id?
+<|im_end|>
+<|im_start|>assistant
+
+
+        
+2023-12-08 19:23:20,829 - DEBUG - chatreadretrieveread.py - run - line 760 - content
+2023-12-08 19:23:20,829 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:23:20] "POST /chat HTTP/1.1" 200 -
+2023-12-08 19:23:40,960 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:23:40,960 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:23:40,960 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:23:40,960 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:23:40,960 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'Give me 5 circuits located in Italy.', 'bot': ' The five circuits located in Italy are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, and Autodromo Internazionale del Mugello.'}, {'user': 'Was there a race in Monza in the 2021 and if so what was the race Id?', 'bot': ' Yes, there was a race in Monza in 2021. The race ID for this race was 1056.'}, {'user': 'And what was the fastest lap ever there?'}]
+2023-12-08 19:23:40,960 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:23:40,960 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:23:40,960 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:23:40,961 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:23:40,961 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: And what was the fastest lap ever there?
+2023-12-08 19:23:43,329 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:23:43,329 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:23:43,329 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:23:43,329 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:23:43,329 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        <|im_start|>user
+Give me 5 circuits located in Italy.
+<|im_end|>
+<|im_start|>assistant
+ The five circuits located in Italy are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, and Autodromo Internazionale del Mugello.<|im_end|>
+<|im_start|>user
+Was there a race in Monza in the 2021 and if so what was the race Id?
+<|im_end|>
+<|im_start|>assistant
+ Yes, there was a race in Monza in 2021. The race ID for this race was 1056.<|im_end|>
+
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        And what was the fastest lap ever there?
+
+        Search query:
+        
+2023-12-08 19:23:46,706 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "races",
+            "core2": "lap_times",
+            "query1": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=",
+            "query2": "fl=milliseconds&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 19:23:46,707 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:23:46,707 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "races",
+            "core2": "lap_times",
+            "query1": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=",
+            "query2": "fl=milliseconds&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 19:23:46,707 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "races",
+            "core2": "lap_times",
+            "query1": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=",
+            "query2": "fl=milliseconds&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 19:23:46,707 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/races/select?fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=
+2023-12-08 19:23:46,732 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:23:46,751 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/lap_times/select?fl=milliseconds&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams=
+2023-12-08 19:23:46,766 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:23:46,777 - DEBUG - chatreadretrieveread.py - run - line 737 - results
+2023-12-08 19:23:46,777 - DEBUG - chatreadretrieveread.py - run - line 738 - [[{'raceId': 1, 'name': 'Australian Grand Prix'}], [{'milliseconds': 85945}]]
+2023-12-08 19:23:46,777 - DEBUG - chatreadretrieveread.py - run - line 741 - content
+2023-12-08 19:23:46,777 - DEBUG - chatreadretrieveread.py - run - line 742 - [{"raceId": 1, "name": "Australian Grand Prix"}]
+[{"milliseconds": 85945}]
+
+2023-12-08 19:23:46,777 - DEBUG - chatreadretrieveread.py - prompt_injection - line 628 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:23:46,777 - DEBUG - chatreadretrieveread.py - prompt_injection - line 639 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:23:46,777 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 679 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:23:47,738 - DEBUG - chatreadretrieveread.py - run - line 754 - answer
+2023-12-08 19:23:47,738 - DEBUG - chatreadretrieveread.py - run - line 755 -  The fastest lap ever recorded at Monza was set by Lewis Hamilton in 2019 with a time of 1:19.307, which is 85945 milliseconds.
+2023-12-08 19:23:47,738 - DEBUG - chatreadretrieveread.py - run - line 756 - results
+2023-12-08 19:23:47,738 - DEBUG - chatreadretrieveread.py - run - line 757 - [[{'raceId': 1, 'name': 'Australian Grand Prix'}], [{'milliseconds': 85945}]]
+2023-12-08 19:23:47,738 - DEBUG - chatreadretrieveread.py - run - line 758 - prompt
+2023-12-08 19:23:47,738 - DEBUG - chatreadretrieveread.py - run - line 759 - <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        
+        
+        Sources:
+        [{"raceId": 1, "name": "Australian Grand Prix"}]
+[{"milliseconds": 85945}]
+
+        <|im_end|>
+        <|im_start|>user
+Give me 5 circuits located in Italy.
+<|im_end|>
+<|im_start|>assistant
+ The five circuits located in Italy are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, and Autodromo Internazionale del Mugello.<|im_end|>
+<|im_start|>user
+Was there a race in Monza in the 2021 and if so what was the race Id?
+<|im_end|>
+<|im_start|>assistant
+ Yes, there was a race in Monza in 2021. The race ID for this race was 1056.<|im_end|>
+<|im_start|>user
+And what was the fastest lap ever there?
+<|im_end|>
+<|im_start|>assistant
+
+
+        
+2023-12-08 19:23:47,738 - DEBUG - chatreadretrieveread.py - run - line 760 - content
+2023-12-08 19:23:47,739 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:23:47] "POST /chat HTTP/1.1" 200 -
+2023-12-08 19:24:28,426 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:24:28] "GET / HTTP/1.1" 200 -
+2023-12-08 19:24:28,455 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:24:28] "[36mGET /assets/index-6ElAx5HV.js HTTP/1.1[0m" 304 -
+2023-12-08 19:24:28,455 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:24:28] "[36mGET /assets/index-oYYtWWvi.css HTTP/1.1[0m" 304 -
+2023-12-08 19:24:30,016 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:24:30,017 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:24:30,017 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:24:30,017 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:24:30,017 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'Give me 5 circuits located in Italy.'}]
+2023-12-08 19:24:30,017 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:24:30,017 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:24:30,017 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:24:30,017 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:24:30,017 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: Give me 5 circuits located in Italy.
+2023-12-08 19:24:36,750 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:24:36,750 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:24:36,750 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:24:36,750 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:24:36,751 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        Give me 5 circuits located in Italy.
+
+        Search query:
+        
+2023-12-08 19:24:38,186 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&useParams="
+        }
+2023-12-08 19:24:38,186 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:24:38,186 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&useParams="
+        }
+2023-12-08 19:24:38,186 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&useParams="
+        }
+2023-12-08 19:24:38,186 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/circuits/select?fl=name&indent=true&q.op=OR&q=country%3AItaly&useParams=
+2023-12-08 19:24:38,250 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:24:38,268 - DEBUG - chatreadretrieveread.py - run - line 737 - results
+2023-12-08 19:24:38,268 - DEBUG - chatreadretrieveread.py - run - line 738 - [[{'name': 'Autodromo Nazionale di Monza'}, {'name': 'Autodromo Enzo e Dino Ferrari'}, {'name': 'Pescara Circuit'}, {'name': 'Autodromo Internazionale del Mugello'}]]
+2023-12-08 19:24:38,268 - DEBUG - chatreadretrieveread.py - run - line 741 - content
+2023-12-08 19:24:38,269 - DEBUG - chatreadretrieveread.py - run - line 742 - [{"name": "Autodromo Nazionale di Monza"}, {"name": "Autodromo Enzo e Dino Ferrari"}, {"name": "Pescara Circuit"}, {"name": "Autodromo Internazionale del Mugello"}]
+
+2023-12-08 19:24:38,269 - DEBUG - chatreadretrieveread.py - prompt_injection - line 628 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:24:38,269 - DEBUG - chatreadretrieveread.py - prompt_injection - line 639 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:24:38,269 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 679 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:24:39,685 - DEBUG - chatreadretrieveread.py - run - line 754 - answer
+2023-12-08 19:24:39,685 - DEBUG - chatreadretrieveread.py - run - line 755 -  Sure, the 5 circuits located in Italy are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, Autodromo Internazionale del Mugello and Imola.
+2023-12-08 19:24:39,685 - DEBUG - chatreadretrieveread.py - run - line 756 - results
+2023-12-08 19:24:39,685 - DEBUG - chatreadretrieveread.py - run - line 757 - [[{'name': 'Autodromo Nazionale di Monza'}, {'name': 'Autodromo Enzo e Dino Ferrari'}, {'name': 'Pescara Circuit'}, {'name': 'Autodromo Internazionale del Mugello'}]]
+2023-12-08 19:24:39,685 - DEBUG - chatreadretrieveread.py - run - line 758 - prompt
+2023-12-08 19:24:39,685 - DEBUG - chatreadretrieveread.py - run - line 759 - <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        
+        
+        Sources:
+        [{"name": "Autodromo Nazionale di Monza"}, {"name": "Autodromo Enzo e Dino Ferrari"}, {"name": "Pescara Circuit"}, {"name": "Autodromo Internazionale del Mugello"}]
+
+        <|im_end|>
+        <|im_start|>user
+Give me 5 circuits located in Italy.
+<|im_end|>
+<|im_start|>assistant
+
+
+        
+2023-12-08 19:24:39,686 - DEBUG - chatreadretrieveread.py - run - line 760 - content
+2023-12-08 19:24:39,686 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:24:39] "POST /chat HTTP/1.1" 200 -
+2023-12-08 19:24:43,912 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:24:43,912 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:24:43,912 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:24:43,912 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:24:43,912 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'Give me 5 circuits located in Italy.', 'bot': ' Sure, the 5 circuits located in Italy are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, Autodromo Internazionale del Mugello and Imola.'}, {'user': 'Was there a race in Monza in the 2021 and if so what was the race Id?'}]
+2023-12-08 19:24:43,912 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:24:43,912 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:24:43,912 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:24:43,912 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:24:43,912 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: Was there a race in Monza in the 2021 and if so what was the race Id?
+2023-12-08 19:24:46,939 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:24:46,939 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:24:46,939 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:24:46,939 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:24:46,939 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        <|im_start|>user
+Give me 5 circuits located in Italy.
+<|im_end|>
+<|im_start|>assistant
+ Sure, the 5 circuits located in Italy are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, Autodromo Internazionale del Mugello and Imola.<|im_end|>
+
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        Was there a race in Monza in the 2021 and if so what was the race Id?
+
+        Search query:
+        
+2023-12-08 19:24:50,086 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "circuits",
+            "core2": "races",
+            "query1": "fl=circuitId&fq=name%3AMonza&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=",
+            "query2": "fl=raceId,name&fq=circuitId%3A1&fq=year%3A2021&indent=true&q.op=OR&q=*%3A*&rows=1&useParams="
+        }
+2023-12-08 19:24:50,087 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:24:50,087 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "circuits",
+            "core2": "races",
+            "query1": "fl=circuitId&fq=name%3AMonza&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=",
+            "query2": "fl=raceId,name&fq=circuitId%3A1&fq=year%3A2021&indent=true&q.op=OR&q=*%3A*&rows=1&useParams="
+        }
+2023-12-08 19:24:50,087 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "circuits",
+            "core2": "races",
+            "query1": "fl=circuitId&fq=name%3AMonza&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=",
+            "query2": "fl=raceId,name&fq=circuitId%3A1&fq=year%3A2021&indent=true&q.op=OR&q=*%3A*&rows=1&useParams="
+        }
+2023-12-08 19:24:50,087 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/circuits/select?fl=circuitId&fq=name%3AMonza&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=
+2023-12-08 19:24:50,110 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:24:50,130 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/races/select?fl=raceId,name&fq=circuitId%3A1&fq=year%3A2021&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=
+2023-12-08 19:24:50,145 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:24:50,157 - DEBUG - chatreadretrieveread.py - run - line 737 - results
+2023-12-08 19:24:50,157 - DEBUG - chatreadretrieveread.py - run - line 738 - [[{'circuitId': 14}], []]
+2023-12-08 19:24:50,157 - DEBUG - chatreadretrieveread.py - run - line 741 - content
+2023-12-08 19:24:50,157 - DEBUG - chatreadretrieveread.py - run - line 742 - [{"circuitId": 14}]
+[]
+
+2023-12-08 19:24:50,157 - DEBUG - chatreadretrieveread.py - prompt_injection - line 628 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:24:50,157 - DEBUG - chatreadretrieveread.py - prompt_injection - line 639 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:24:50,157 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 679 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:24:53,254 - ERROR - app.py - chat - line 184 - Exception in /chat
+Traceback (most recent call last):
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/./app.py", line 181, in chat
+    r = impl.run(request.json["history"], request.json.get("overrides") or {}, request.json.get("language") or "English")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py", line 752, in run
+    answer = self.generate_contextual_answer(prompt=prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py", line 683, in generate_contextual_answer
+    completion = openai.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_utils/_utils.py", line 299, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/resources/completions.py", line 559, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 1063, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 842, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 873, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 933, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 873, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 933, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 885, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for text-davinci-003 in organization org-fN8Nvu72fNp3WH0U9bH2Gu1H on requests per min (RPM): Limit 3, Used 3, Requested 1. Please try again in 20s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'requests', 'param': None, 'code': 'rate_limit_exceeded'}}
+2023-12-08 19:24:53,262 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:24:53] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2023-12-08 19:24:58,627 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:24:58] "GET / HTTP/1.1" 200 -
+2023-12-08 19:24:58,654 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:24:58] "[36mGET /assets/index-6ElAx5HV.js HTTP/1.1[0m" 304 -
+2023-12-08 19:24:58,655 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:24:58] "[36mGET /assets/index-oYYtWWvi.css HTTP/1.1[0m" 304 -
+2023-12-08 19:25:33,015 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:25:33,016 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:25:33,016 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:25:33,016 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:25:33,017 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'Give me 5 circuits located in Italy.'}]
+2023-12-08 19:25:33,017 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:25:33,017 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:25:33,017 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:25:33,017 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:25:33,017 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: Give me 5 circuits located in Italy.
+2023-12-08 19:25:40,963 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:25:40,963 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:25:40,963 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:25:40,963 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:25:40,964 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        Give me 5 circuits located in Italy.
+
+        Search query:
+        
+2023-12-08 19:25:42,103 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&rows=5&useParams="
+        }
+2023-12-08 19:25:42,103 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:25:42,103 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&rows=5&useParams="
+        }
+2023-12-08 19:25:42,103 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&rows=5&useParams="
+        }
+2023-12-08 19:25:42,103 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/circuits/select?fl=name&indent=true&q.op=OR&q=country%3AItaly&rows=5&useParams=
+2023-12-08 19:25:42,130 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:25:42,148 - DEBUG - chatreadretrieveread.py - run - line 737 - results
+2023-12-08 19:25:42,148 - DEBUG - chatreadretrieveread.py - run - line 738 - [[{'name': 'Autodromo Nazionale di Monza'}, {'name': 'Autodromo Enzo e Dino Ferrari'}, {'name': 'Pescara Circuit'}, {'name': 'Autodromo Internazionale del Mugello'}]]
+2023-12-08 19:25:42,149 - DEBUG - chatreadretrieveread.py - run - line 741 - content
+2023-12-08 19:25:42,149 - DEBUG - chatreadretrieveread.py - run - line 742 - [{"name": "Autodromo Nazionale di Monza"}, {"name": "Autodromo Enzo e Dino Ferrari"}, {"name": "Pescara Circuit"}, {"name": "Autodromo Internazionale del Mugello"}]
+
+2023-12-08 19:25:42,149 - DEBUG - chatreadretrieveread.py - prompt_injection - line 628 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:25:42,149 - DEBUG - chatreadretrieveread.py - prompt_injection - line 639 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:25:42,149 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 679 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:25:43,189 - DEBUG - chatreadretrieveread.py - run - line 754 - answer
+2023-12-08 19:25:43,189 - DEBUG - chatreadretrieveread.py - run - line 755 -  Sure. The 5 circuits located in Italy are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, and Autodromo Internazionale del Mugello.
+2023-12-08 19:25:43,189 - DEBUG - chatreadretrieveread.py - run - line 756 - results
+2023-12-08 19:25:43,189 - DEBUG - chatreadretrieveread.py - run - line 757 - [[{'name': 'Autodromo Nazionale di Monza'}, {'name': 'Autodromo Enzo e Dino Ferrari'}, {'name': 'Pescara Circuit'}, {'name': 'Autodromo Internazionale del Mugello'}]]
+2023-12-08 19:25:43,189 - DEBUG - chatreadretrieveread.py - run - line 758 - prompt
+2023-12-08 19:25:43,189 - DEBUG - chatreadretrieveread.py - run - line 759 - <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        
+        
+        Sources:
+        [{"name": "Autodromo Nazionale di Monza"}, {"name": "Autodromo Enzo e Dino Ferrari"}, {"name": "Pescara Circuit"}, {"name": "Autodromo Internazionale del Mugello"}]
+
+        <|im_end|>
+        <|im_start|>user
+Give me 5 circuits located in Italy.
+<|im_end|>
+<|im_start|>assistant
+
+
+        
+2023-12-08 19:25:43,189 - DEBUG - chatreadretrieveread.py - run - line 760 - content
+2023-12-08 19:25:43,190 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:25:43] "POST /chat HTTP/1.1" 200 -
+2023-12-08 19:25:51,864 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:25:51,864 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:25:51,864 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:25:51,864 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:25:51,864 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'Give me 5 circuits located in Italy.', 'bot': ' Sure. The 5 circuits located in Italy are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, and Autodromo Internazionale del Mugello.'}, {'user': 'Was there a race in Monza in the 2021 and if so what was the race Id?'}]
+2023-12-08 19:25:51,864 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:25:51,864 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:25:51,864 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:25:51,865 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:25:51,865 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: Was there a race in Monza in the 2021 and if so what was the race Id?
+2023-12-08 19:25:53,670 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:25:53,670 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:25:53,670 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:25:53,670 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:25:53,671 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        <|im_start|>user
+Give me 5 circuits located in Italy.
+<|im_end|>
+<|im_start|>assistant
+ Sure. The 5 circuits located in Italy are Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, and Autodromo Internazionale del Mugello.<|im_end|>
+
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        Was there a race in Monza in the 2021 and if so what was the race Id?
+
+        Search query:
+        
+2023-12-08 19:25:56,186 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "races",
+            "core2": "circuits",
+            "query1": "fl=raceId&fq=name&indent=true&q.op=OR&q=year%3A2021&rows=1&useParams=",
+            "query2": "fl=circuitRef&fq=name%3AMonza&indent=true&q.op=OR&q=*%3A*&rows=1&useParams="
+        }
+2023-12-08 19:25:56,186 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:25:56,186 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "races",
+            "core2": "circuits",
+            "query1": "fl=raceId&fq=name&indent=true&q.op=OR&q=year%3A2021&rows=1&useParams=",
+            "query2": "fl=circuitRef&fq=name%3AMonza&indent=true&q.op=OR&q=*%3A*&rows=1&useParams="
+        }
+2023-12-08 19:25:56,186 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "races",
+            "core2": "circuits",
+            "query1": "fl=raceId&fq=name&indent=true&q.op=OR&q=year%3A2021&rows=1&useParams=",
+            "query2": "fl=circuitRef&fq=name%3AMonza&indent=true&q.op=OR&q=*%3A*&rows=1&useParams="
+        }
+2023-12-08 19:25:56,186 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/races/select?fl=raceId&fq=name&indent=true&q.op=OR&q=year%3A2021&rows=1&useParams=
+2023-12-08 19:25:56,226 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:25:56,240 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/circuits/select?fl=circuitRef&fq=name%3AMonza&indent=true&q.op=OR&q=*%3A*&rows=1&useParams=
+2023-12-08 19:25:56,251 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:25:56,261 - DEBUG - chatreadretrieveread.py - run - line 737 - results
+2023-12-08 19:25:56,261 - DEBUG - chatreadretrieveread.py - run - line 738 - [[], [{'circuitRef': 'monza'}]]
+2023-12-08 19:25:56,261 - DEBUG - chatreadretrieveread.py - run - line 741 - content
+2023-12-08 19:25:56,261 - DEBUG - chatreadretrieveread.py - run - line 742 - []
+[{"circuitRef": "monza"}]
+
+2023-12-08 19:25:56,261 - DEBUG - chatreadretrieveread.py - prompt_injection - line 628 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:25:56,261 - DEBUG - chatreadretrieveread.py - prompt_injection - line 639 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:25:56,261 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 679 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:25:59,618 - ERROR - app.py - chat - line 184 - Exception in /chat
+Traceback (most recent call last):
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/./app.py", line 181, in chat
+    r = impl.run(request.json["history"], request.json.get("overrides") or {}, request.json.get("language") or "English")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py", line 752, in run
+    answer = self.generate_contextual_answer(prompt=prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py", line 683, in generate_contextual_answer
+    completion = openai.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_utils/_utils.py", line 299, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/resources/completions.py", line 559, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 1063, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 842, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 873, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 933, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 873, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 933, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 885, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for text-davinci-003 in organization org-fN8Nvu72fNp3WH0U9bH2Gu1H on requests per min (RPM): Limit 3, Used 3, Requested 1. Please try again in 20s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'requests', 'param': None, 'code': 'rate_limit_exceeded'}}
+2023-12-08 19:25:59,620 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:25:59] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2023-12-08 19:28:52,279 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:28:52] "GET / HTTP/1.1" 200 -
+2023-12-08 19:28:52,307 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:28:52] "[36mGET /assets/index-6ElAx5HV.js HTTP/1.1[0m" 304 -
+2023-12-08 19:28:52,308 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:28:52] "[36mGET /assets/index-oYYtWWvi.css HTTP/1.1[0m" 304 -
+2023-12-08 19:28:54,065 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:28:54,066 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:28:54,066 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:28:54,066 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:28:54,066 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'Give me 5 circuits located in Italy.'}]
+2023-12-08 19:28:54,066 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:28:54,066 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:28:54,066 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:28:54,066 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:28:54,066 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: Give me 5 circuits located in Italy.
+2023-12-08 19:28:57,658 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:28:57,658 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:28:57,658 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:28:57,658 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:28:57,658 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        Give me 5 circuits located in Italy.
+
+        Search query:
+        
+2023-12-08 19:28:58,885 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&useParams="
+        }
+2023-12-08 19:28:58,885 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:28:58,885 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&useParams="
+        }
+2023-12-08 19:28:58,885 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AItaly&useParams="
+        }
+2023-12-08 19:28:58,885 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/circuits/select?fl=name&indent=true&q.op=OR&q=country%3AItaly&useParams=
+2023-12-08 19:28:58,933 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:28:58,948 - DEBUG - chatreadretrieveread.py - run - line 737 - results
+2023-12-08 19:28:58,948 - DEBUG - chatreadretrieveread.py - run - line 738 - [[{'name': 'Autodromo Nazionale di Monza'}, {'name': 'Autodromo Enzo e Dino Ferrari'}, {'name': 'Pescara Circuit'}, {'name': 'Autodromo Internazionale del Mugello'}]]
+2023-12-08 19:28:58,949 - DEBUG - chatreadretrieveread.py - run - line 741 - content
+2023-12-08 19:28:58,949 - DEBUG - chatreadretrieveread.py - run - line 742 - [{"name": "Autodromo Nazionale di Monza"}, {"name": "Autodromo Enzo e Dino Ferrari"}, {"name": "Pescara Circuit"}, {"name": "Autodromo Internazionale del Mugello"}]
+
+2023-12-08 19:28:58,949 - DEBUG - chatreadretrieveread.py - prompt_injection - line 628 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:28:58,949 - DEBUG - chatreadretrieveread.py - prompt_injection - line 639 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:28:58,949 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 679 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:29:00,229 - DEBUG - chatreadretrieveread.py - run - line 754 - answer
+2023-12-08 19:29:00,229 - DEBUG - chatreadretrieveread.py - run - line 755 -  Here are 5 circuits located in Italy: Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, Autodromo Internazionale del Mugello.
+2023-12-08 19:29:00,229 - DEBUG - chatreadretrieveread.py - run - line 756 - results
+2023-12-08 19:29:00,229 - DEBUG - chatreadretrieveread.py - run - line 757 - [[{'name': 'Autodromo Nazionale di Monza'}, {'name': 'Autodromo Enzo e Dino Ferrari'}, {'name': 'Pescara Circuit'}, {'name': 'Autodromo Internazionale del Mugello'}]]
+2023-12-08 19:29:00,229 - DEBUG - chatreadretrieveread.py - run - line 758 - prompt
+2023-12-08 19:29:00,229 - DEBUG - chatreadretrieveread.py - run - line 759 - <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        
+        
+        Sources:
+        [{"name": "Autodromo Nazionale di Monza"}, {"name": "Autodromo Enzo e Dino Ferrari"}, {"name": "Pescara Circuit"}, {"name": "Autodromo Internazionale del Mugello"}]
+
+        <|im_end|>
+        <|im_start|>user
+Give me 5 circuits located in Italy.
+<|im_end|>
+<|im_start|>assistant
+
+
+        
+2023-12-08 19:29:00,229 - DEBUG - chatreadretrieveread.py - run - line 760 - content
+2023-12-08 19:29:00,230 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:29:00] "POST /chat HTTP/1.1" 200 -
+2023-12-08 19:29:04,065 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:29:04,066 - DEBUG - chatreadretrieveread.py - run - line 701 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:29:04,066 - DEBUG - chatreadretrieveread.py - run - line 706 - m_language: en
+2023-12-08 19:29:04,066 - INFO - chatreadretrieveread.py - run - line 709 - history
+2023-12-08 19:29:04,066 - INFO - chatreadretrieveread.py - run - line 710 - [{'user': 'Give me 5 circuits located in Italy.', 'bot': ' Here are 5 circuits located in Italy: Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, Autodromo Internazionale del Mugello.'}, {'user': 'Was there a race in Monza in the 2021 and if so what was the race Id?'}]
+2023-12-08 19:29:04,066 - DEBUG - chatreadretrieveread.py - run - line 713 - Performing sentimental analysis...
+2023-12-08 19:29:04,066 - INFO - chatreadretrieveread.py - run - line 716 - sentimental_str
+2023-12-08 19:29:04,066 - INFO - chatreadretrieveread.py - run - line 717 - 
+2023-12-08 19:29:04,066 - DEBUG - chatreadretrieveread.py - gpt_functions - line 441 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:29:04,066 - INFO - chatreadretrieveread.py - gpt_functions - line 443 - User question: Was there a race in Monza in the 2021 and if so what was the race Id?
+2023-12-08 19:29:05,700 - DEBUG - chatreadretrieveread.py - run - line 723 - should_return
+2023-12-08 19:29:05,700 - DEBUG - chatreadretrieveread.py - run - line 724 - False
+2023-12-08 19:29:05,700 - DEBUG - chatreadretrieveread.py - run - line 725 - {}
+2023-12-08 19:29:05,700 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 505 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:29:05,700 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 520 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: 
+        circuits: 
+            "circuitId": 1,
+            "circuitRef": "",
+            "name": "",
+            "location": "",
+            "country": "",
+            "lat": ,
+            "lng": ,
+            "alt": ,
+            "url":,
+            "circuit_bio": 
+        , 
+        drivers:
+            "driverId":,
+            "driverRef":,
+            "number": ,
+            "code": ,
+            "forename": ,
+            "surname": ,
+            "dateOfBirth": ,
+            "nationality": ,
+            "url": 
+            "driver_bio":
+        , lap_times: 
+            "raceId": ,
+            "driverId":,
+            "lap": ,
+            "position":,
+            "milliseconds": 
+        , pit_stops:
+            "raceId": ,
+            "driverId": ,
+            "stop": ,
+            "lap": ,
+            "milliseconds": ,
+            "datetime":
+        , races:
+            "raceId": ,
+            "year":,
+            "round": ,
+            "circuitId": ,
+            "name": ,
+            "url": ,
+            "datetime": "2009-04-05T09:00:00Z",
+            "quali_datetime": null,
+            "sprint_datetime": null,
+        results:
+            "position": ,
+            "raceId": ,
+
+
+
+        Chat History:
+        <|im_start|>user
+Give me 5 circuits located in Italy.
+<|im_end|>
+<|im_start|>assistant
+ Here are 5 circuits located in Italy: Autodromo Nazionale di Monza, Autodromo Enzo e Dino Ferrari, Pescara Circuit, Autodromo Internazionale del Mugello.<|im_end|>
+
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId,name&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        Was there a race in Monza in the 2021 and if so what was the race Id?
+
+        Search query:
+        
+2023-12-08 19:29:08,338 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 532 - translated_query:  {
+            "core1": "circuits",
+            "core2": "races",
+            "query1": "fl=circuitId&indent=true&q.op=OR&q=name%3AMonza&rows=1&useParams=",
+            "query2": "fl=raceId,name&fq=circuitId%3A1&indent=true&q.op=OR&q=year%3A2021&useParams="
+        }
+2023-12-08 19:29:08,338 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 533 - q
+2023-12-08 19:29:08,338 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 534 -  {
+            "core1": "circuits",
+            "core2": "races",
+            "query1": "fl=circuitId&indent=true&q.op=OR&q=name%3AMonza&rows=1&useParams=",
+            "query2": "fl=raceId,name&fq=circuitId%3A1&indent=true&q.op=OR&q=year%3A2021&useParams="
+        }
+2023-12-08 19:29:08,338 - DEBUG - chatreadretrieveread.py - run - line 734 - optimized_query is not empty:  {
+            "core1": "circuits",
+            "core2": "races",
+            "query1": "fl=circuitId&indent=true&q.op=OR&q=name%3AMonza&rows=1&useParams=",
+            "query2": "fl=raceId,name&fq=circuitId%3A1&indent=true&q.op=OR&q=year%3A2021&useParams="
+        }
+2023-12-08 19:29:08,338 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/circuits/select?fl=circuitId&indent=true&q.op=OR&q=name%3AMonza&rows=1&useParams=
+2023-12-08 19:29:08,361 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:29:08,377 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/races/select?fl=raceId,name&fq=circuitId%3A1&indent=true&q.op=OR&q=year%3A2021&useParams=
+2023-12-08 19:29:08,391 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:29:08,401 - DEBUG - chatreadretrieveread.py - run - line 737 - results
+2023-12-08 19:29:08,402 - DEBUG - chatreadretrieveread.py - run - line 738 - [[{'circuitId': 14}], []]
+2023-12-08 19:29:08,402 - DEBUG - chatreadretrieveread.py - run - line 741 - content
+2023-12-08 19:29:08,402 - DEBUG - chatreadretrieveread.py - run - line 742 - [{"circuitId": 14}]
+[]
+
+2023-12-08 19:29:08,402 - DEBUG - chatreadretrieveread.py - prompt_injection - line 628 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:29:08,402 - DEBUG - chatreadretrieveread.py - prompt_injection - line 639 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you have. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:29:08,402 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 679 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:29:11,551 - ERROR - app.py - chat - line 184 - Exception in /chat
+Traceback (most recent call last):
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/./app.py", line 181, in chat
+    r = impl.run(request.json["history"], request.json.get("overrides") or {}, request.json.get("language") or "English")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py", line 752, in run
+    answer = self.generate_contextual_answer(prompt=prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py", line 683, in generate_contextual_answer
+    completion = openai.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_utils/_utils.py", line 299, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/resources/completions.py", line 559, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 1063, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 842, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 873, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 933, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 873, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 933, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/backend_env/lib/python3.11/site-packages/openai/_base_client.py", line 885, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for text-davinci-003 in organization org-fN8Nvu72fNp3WH0U9bH2Gu1H on requests per min (RPM): Limit 3, Used 3, Requested 1. Please try again in 20s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'requests', 'param': None, 'code': 'rate_limit_exceeded'}}
+2023-12-08 19:29:11,553 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:29:11] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2023-12-08 19:29:45,170 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:29:45] "[33mGET / HTTP/1.1[0m" 404 -
+2023-12-08 19:30:00,581 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:30:00] "GET / HTTP/1.1" 200 -
+2023-12-08 19:30:00,610 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:30:00] "GET /assets/index-8WBJDVzN.js HTTP/1.1" 200 -
+2023-12-08 19:30:00,611 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:30:00] "GET /assets/index-oYYtWWvi.css HTTP/1.1" 200 -
+2023-12-08 19:34:40,787 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:34:40] "GET / HTTP/1.1" 200 -
+2023-12-08 19:34:40,818 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:34:40] "GET /assets/index-QjpNqP9R.js HTTP/1.1" 200 -
+2023-12-08 19:34:40,820 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:34:40] "GET /assets/index-oYYtWWvi.css HTTP/1.1" 200 -
+2023-12-08 19:35:51,672 - INFO - _internal.py - _log - line 96 -  * Detected change in '/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py', reloading

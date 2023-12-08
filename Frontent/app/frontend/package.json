@@ -6,7 +6,8 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
-        "watch": "tsc && vite build --watch"
+        "watch": "tsc && vite build --watch",
+        "mac": "tsc && sudo vite build --watch"
     },
     "dependencies": {
         "@emotion/react": "^11.11.1",

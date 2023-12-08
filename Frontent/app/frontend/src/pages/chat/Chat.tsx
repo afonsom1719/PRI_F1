@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect, ChangeEvent } from "react";
 import { Checkbox, Panel, DefaultButton, TextField, SpinButton } from "@fluentui/react";
-import { SparkleFilled } from "@fluentui/react-icons";
+import { SkipForwardTabFilled, SparkleFilled, StarOneQuarterFilled, SwimmingPoolFilled } from "@fluentui/react-icons";
 import styles from "./Chat.module.css";
 
 import { chatApi, Approaches, AskResponse, ChatRequest, ChatTurn } from "../../api";
@@ -200,8 +200,8 @@ const Chat = () => {
                 <div className={styles.chatContainer}>
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
-                            <SparkleFilled fontSize={"120px"} primaryFill={"rgba(115, 118, 225, 1)"} aria-hidden="true" aria-label="Chat logo" />
-                            <h1 className={styles.chatEmptyStateTitle}>Chat with your data</h1>
+                            <SwimmingPoolFilled fontSize={"120px"} primaryFill={"rgba(255, 50, 0, 1)"} aria-hidden="true" aria-label="Chat logo" />
+                            <h1 className={styles.chatEmptyStateTitle}>Chat with Formula GPT</h1>
                             <h2 className={styles.chatEmptyStateSubtitle}>Ask anything or try an example</h2>
                             <ExampleList onExampleClicked={onExampleClicked} />
                         </div>
@@ -253,7 +253,7 @@ const Chat = () => {
                             handleCallback={handleCallback}
                             clearOnSend
                             sentiment={+sentimentValue}
-                            placeholder="Type a new question (e.g. What are the standard targeting options available for selection in the Platform UI?)"
+                            placeholder="Type a new question (e.g. Give me 4 circuits in Italy.)"
                             disabled={isLoading}
                             onSend={question => makeApiRequest(question)}
                             onFileUpload={(e: ChangeEvent<HTMLInputElement>) => handleFileChange(e)}

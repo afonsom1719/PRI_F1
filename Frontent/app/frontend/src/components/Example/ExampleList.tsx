@@ -9,20 +9,20 @@ export type ExampleModel = {
 
 const EXAMPLES: ExampleModel[] = [
     {
-        text: "What is the include weekends setting?",
-        value: "What is the include weekends setting?"
+        text: "What was the fastest lap time for driver Charles Leclerc at the 2018 occurrence of the Australian Grand Prix?",
+        value: "What was the fastest lap time for driver Charles Leclerc at the 2018 occurrence of the Australian Grand Prix?"
     },
     {
-        text: "In the video creatives what are the field names on the platform UI when uploading a raw video file?",
-        value: "In the video creatives what are the field names on the platform UI when uploading a raw video file?"
+        text: "Give me 4 circuits located in Italy.",
+        value: "Give me 4 circuits located in Italy."
     },
     {
-        text: "What are the standard targeting options available for selection in the Platform UI?",
-        value: "What are the standard targeting options available for selection in the Platform UI?"
+        text: "Which was the time of the fastest pitstop at the 2021 Portuguese Grand Prix?",
+        value: "Which was the time of the fastest pitstop at the 2021 Portuguese Grand Prix?"
     },
     {
-        text: "Create an image of a Friendly robot, serving coffee, 3D render",
-        value: "Create an image of a Friendly robot, serving coffee, 3D render"
+        text: "Name some drivers with the surname Schumacher.",
+        value: "Name some drivers with the surname Schumacher."
     }
 ];
 

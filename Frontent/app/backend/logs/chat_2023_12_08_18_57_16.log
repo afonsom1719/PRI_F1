@@ -1,0 +1,258 @@
+2023-12-08 18:57:16,936 - WARNING - _internal.py - _log - line 96 -  * Debugger is active!
+2023-12-08 18:57:16,943 - INFO - _internal.py - _log - line 96 -  * Debugger PIN: 232-792-731
+2023-12-08 18:58:11,051 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 18:58:11] "GET / HTTP/1.1" 200 -
+2023-12-08 18:58:11,078 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 18:58:11] "[36mGET /assets/index-6ElAx5HV.js HTTP/1.1[0m" 304 -
+2023-12-08 18:58:11,079 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 18:58:11] "[36mGET /assets/index-oYYtWWvi.css HTTP/1.1[0m" 304 -
+2023-12-08 18:58:32,181 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 18:58:32,183 - DEBUG - chatreadretrieveread.py - run - line 650 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 18:58:32,183 - DEBUG - chatreadretrieveread.py - run - line 655 - m_language: en
+2023-12-08 18:58:32,183 - INFO - chatreadretrieveread.py - run - line 658 - history
+2023-12-08 18:58:32,183 - INFO - chatreadretrieveread.py - run - line 659 - [{'user': 'What was the fastest lap of the driver 844 in the race 989?'}]
+2023-12-08 18:58:32,183 - DEBUG - chatreadretrieveread.py - run - line 662 - Performing sentimental analysis...
+2023-12-08 18:58:32,183 - INFO - chatreadretrieveread.py - run - line 665 - sentimental_str
+2023-12-08 18:58:32,183 - INFO - chatreadretrieveread.py - run - line 666 - 
+2023-12-08 18:58:32,183 - DEBUG - chatreadretrieveread.py - gpt_functions - line 390 - Checking if we need to call a function using GPT functions...
+2023-12-08 18:58:32,183 - INFO - chatreadretrieveread.py - gpt_functions - line 392 - User question: What was the fastest lap of the driver 844 in the race 989?
+2023-12-08 18:58:33,984 - DEBUG - chatreadretrieveread.py - run - line 672 - should_return
+2023-12-08 18:58:33,985 - DEBUG - chatreadretrieveread.py - run - line 673 - False
+2023-12-08 18:58:33,985 - DEBUG - chatreadretrieveread.py - run - line 674 - {}
+2023-12-08 18:58:33,985 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 454 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 18:58:33,985 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 469 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: circuits, drivers, lap_times, pit_stops, qualifying, races, results  
+
+        Chat History:
+        
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        What was the fastest lap of the driver 844 in the race 989?
+
+        Search query:
+        
+2023-12-08 18:58:35,989 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 481 - translated_query:  {
+            "core1": "lap_times",
+            "query1": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 18:58:35,989 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 482 - q
+2023-12-08 18:58:35,989 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 483 -  {
+            "core1": "lap_times",
+            "query1": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 18:58:35,990 - DEBUG - chatreadretrieveread.py - run - line 683 - optimized_query is not empty:  {
+            "core1": "lap_times",
+            "query1": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 18:58:35,990 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/lap_times/select?fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams=
+2023-12-08 18:58:36,029 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 18:58:36,050 - DEBUG - chatreadretrieveread.py - run - line 686 - results
+2023-12-08 18:58:36,050 - DEBUG - chatreadretrieveread.py - run - line 687 - [[{'milliseconds': 88759}]]
+2023-12-08 18:58:36,050 - DEBUG - chatreadretrieveread.py - run - line 690 - content
+2023-12-08 18:58:36,050 - DEBUG - chatreadretrieveread.py - run - line 691 - [{"milliseconds": 88759}]
+
+2023-12-08 18:58:36,050 - DEBUG - chatreadretrieveread.py - prompt_injection - line 577 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 18:58:36,050 - DEBUG - chatreadretrieveread.py - prompt_injection - line 588 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you know and nothing more. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 18:58:36,050 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 628 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 18:58:36,631 - DEBUG - chatreadretrieveread.py - run - line 703 - answer
+2023-12-08 18:58:36,632 - DEBUG - chatreadretrieveread.py - run - line 704 -  The fastest lap of driver 844 in race 989 was 88759 milliseconds.
+2023-12-08 18:58:36,632 - DEBUG - chatreadretrieveread.py - run - line 705 - results
+2023-12-08 18:58:36,632 - DEBUG - chatreadretrieveread.py - run - line 706 - [[{'milliseconds': 88759}]]
+2023-12-08 18:58:36,632 - DEBUG - chatreadretrieveread.py - run - line 707 - prompt
+2023-12-08 18:58:36,632 - DEBUG - chatreadretrieveread.py - run - line 708 - <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you know and nothing more. Do not add information of your own to the answer
+        
+        
+        Sources:
+        [{"milliseconds": 88759}]
+
+        <|im_end|>
+        <|im_start|>user
+What was the fastest lap of the driver 844 in the race 989?
+<|im_end|>
+<|im_start|>assistant
+
+
+        
+2023-12-08 18:58:36,632 - DEBUG - chatreadretrieveread.py - run - line 709 - content
+2023-12-08 18:58:36,633 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 18:58:36] "POST /chat HTTP/1.1" 200 -
+2023-12-08 18:58:53,995 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 18:58:53] "GET / HTTP/1.1" 200 -
+2023-12-08 18:58:54,023 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 18:58:54] "[36mGET /assets/index-6ElAx5HV.js HTTP/1.1[0m" 304 -
+2023-12-08 18:58:54,023 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 18:58:54] "[36mGET /assets/index-oYYtWWvi.css HTTP/1.1[0m" 304 -
+2023-12-08 19:00:25,386 - DEBUG - app.py - chat - line 169 - Running chat endpoint
+2023-12-08 19:00:25,388 - DEBUG - chatreadretrieveread.py - run - line 650 - Running /Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py approach
+2023-12-08 19:00:25,388 - DEBUG - chatreadretrieveread.py - run - line 655 - m_language: en
+2023-12-08 19:00:25,388 - INFO - chatreadretrieveread.py - run - line 658 - history
+2023-12-08 19:00:25,388 - INFO - chatreadretrieveread.py - run - line 659 - [{'user': 'What was the fastest lap for the driver 822 in the race 1054?'}]
+2023-12-08 19:00:25,388 - DEBUG - chatreadretrieveread.py - run - line 662 - Performing sentimental analysis...
+2023-12-08 19:00:25,388 - INFO - chatreadretrieveread.py - run - line 665 - sentimental_str
+2023-12-08 19:00:25,388 - INFO - chatreadretrieveread.py - run - line 666 - 
+2023-12-08 19:00:25,388 - DEBUG - chatreadretrieveread.py - gpt_functions - line 390 - Checking if we need to call a function using GPT functions...
+2023-12-08 19:00:25,388 - INFO - chatreadretrieveread.py - gpt_functions - line 392 - User question: What was the fastest lap for the driver 822 in the race 1054?
+2023-12-08 19:00:27,024 - DEBUG - chatreadretrieveread.py - run - line 672 - should_return
+2023-12-08 19:00:27,025 - DEBUG - chatreadretrieveread.py - run - line 673 - False
+2023-12-08 19:00:27,025 - DEBUG - chatreadretrieveread.py - run - line 674 - {}
+2023-12-08 19:00:27,025 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 454 - Generating an optimized keyword search query based on the chat history and the last question...
+2023-12-08 19:00:27,025 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 469 - prompt: Below is a history of the conversation so far, and a new question asked by the user that needs to be answered.
+        Generate a search query based on the conversation and the new question. Beware that the question may not be in English.
+        If the question is not in English, translate the question to English before generating the search query.
+        The query can be made to a group of cores that are: circuits, drivers, lap_times, pit_stops, qualifying, races, results  
+
+        Chat History:
+        
+
+        
+        Question:
+        Get me drivers with the surname Schumacher.
+
+        Search query:
+        {
+            "core1": "drivers",
+            "query1": "fl=forename,surname%2C%20surname&indent=true&q.op=OR&q=surname%3ASchumacher&rows=10&useParams="
+        }
+
+        Question:
+        Give me 5 circuits located in the USA.
+
+        Search query:
+        {
+            "core1": "circuits",
+            "query1": "fl=name&indent=true&q.op=OR&q=country%3AAustralia&useParams="
+        }
+
+        Question:
+        What was the fastest lap time for driver Charles Leclerc at the 2018 Australian Grand Prix?
+
+        Search query:
+        {
+            "core1": "drivers",
+            "core2": "races",
+            "core3": "lap_times",
+            "query1": "fl=driverId,forename,surname&fq=forename%3ACharles&fq=surname%3ALeclerc&indent=true&q.op=OR&q=*%3A*&useParams=",
+            "query2": "fl=raceId&fq=name%3AAustralian%20Grand%20Prix&indent=true&q.op=OR&q=year%3A2018&rows=1&useParams=",
+            "query3": "fl=milliseconds&fq=driverId%3A844&fq=raceId%3A989&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+        
+
+        Question:
+        What was the fastest lap for the driver 822 in the race 1054?
+
+        Search query:
+        
+2023-12-08 19:00:29,134 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 481 - translated_query: 
+        {
+            "core1": "lap_times",
+            "query1": "fl=milliseconds&fq=driverId%3A822&fq=raceId%3A1054&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 19:00:29,135 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 482 - q
+2023-12-08 19:00:29,135 - DEBUG - chatreadretrieveread.py - generate_optimized_query - line 483 - 
+        {
+            "core1": "lap_times",
+            "query1": "fl=milliseconds&fq=driverId%3A822&fq=raceId%3A1054&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 19:00:29,135 - DEBUG - chatreadretrieveread.py - run - line 683 - optimized_query is not empty: 
+        {
+            "core1": "lap_times",
+            "query1": "fl=milliseconds&fq=driverId%3A822&fq=raceId%3A1054&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams="
+        }
+2023-12-08 19:00:29,135 - INFO - solr_requests.py - get_solr_data - line 10 - Sending request to Solr: http://localhost:8983/solr/lap_times/select?fl=milliseconds&fq=driverId%3A822&fq=raceId%3A1054&indent=true&q.op=OR&q=*%3A*&rows=1&sort=milliseconds%20asc&useParams=
+2023-12-08 19:00:29,199 - INFO - solr_requests.py - get_solr_data - line 13 - Response from Solr: <Response [200]>
+2023-12-08 19:00:29,214 - DEBUG - chatreadretrieveread.py - run - line 686 - results
+2023-12-08 19:00:29,214 - DEBUG - chatreadretrieveread.py - run - line 687 - [[{'milliseconds': 79865}]]
+2023-12-08 19:00:29,214 - DEBUG - chatreadretrieveread.py - run - line 690 - content
+2023-12-08 19:00:29,214 - DEBUG - chatreadretrieveread.py - run - line 691 - [{"milliseconds": 79865}]
+
+2023-12-08 19:00:29,214 - DEBUG - chatreadretrieveread.py - prompt_injection - line 577 - Allowing client to replace the entire prompt, or to inject into the exiting prompt using >>>...
+2023-12-08 19:00:29,214 - DEBUG - chatreadretrieveread.py - prompt_injection - line 588 - prefix: <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you know and nothing more. Do not add information of your own to the answer
+        {follow_up_questions_prompt}
+        {injected_prompt}
+        Sources:
+        {sources}
+        <|im_end|>
+        {chat_history}
+        
+2023-12-08 19:00:29,215 - DEBUG - chatreadretrieveread.py - generate_contextual_answer - line 628 - Generating a contextual and content specific answer using the search results and chat history...
+2023-12-08 19:00:29,831 - DEBUG - chatreadretrieveread.py - run - line 703 - answer
+2023-12-08 19:00:29,831 - DEBUG - chatreadretrieveread.py - run - line 704 -  I'm sorry, I don't have enough information to answer your question.
+2023-12-08 19:00:29,831 - DEBUG - chatreadretrieveread.py - run - line 705 - results
+2023-12-08 19:00:29,831 - DEBUG - chatreadretrieveread.py - run - line 706 - [[{'milliseconds': 79865}]]
+2023-12-08 19:00:29,831 - DEBUG - chatreadretrieveread.py - run - line 707 - prompt
+2023-12-08 19:00:29,831 - DEBUG - chatreadretrieveread.py - run - line 708 - <|im_start|>system
+        Assistant helps the FEUP students learn information about the formula one sport and answers their questions about it based on the information provided below.
+        If the user asks if the assistant can answer questions about the formula one sport, tell him you can but he needs to provide you with the information he means to retrieve. 
+        Be extense in your answers. Take not that the sources might not be 100% accurate. Therefore you must be careful when selecting the information to answer the user.
+        When giving information about times always give the time in seconds.
+        Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
+        In case of the information no completly fulfilling the user's question, tell the user what you know and nothing more. Do not add information of your own to the answer
+        
+        
+        Sources:
+        [{"milliseconds": 79865}]
+
+        <|im_end|>
+        <|im_start|>user
+What was the fastest lap for the driver 822 in the race 1054?
+<|im_end|>
+<|im_start|>assistant
+
+
+        
+2023-12-08 19:00:29,832 - DEBUG - chatreadretrieveread.py - run - line 709 - content
+2023-12-08 19:00:29,832 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:00:29] "POST /chat HTTP/1.1" 200 -
+2023-12-08 19:02:29,151 - INFO - _internal.py - _log - line 96 -  * Detected change in '/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py', reloading

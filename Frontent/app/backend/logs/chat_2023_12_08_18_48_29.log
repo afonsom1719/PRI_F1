@@ -1,0 +1,3 @@
+2023-12-08 18:48:29,071 - WARNING - _internal.py - _log - line 96 -  * Debugger is active!
+2023-12-08 18:48:29,077 - INFO - _internal.py - _log - line 96 -  * Debugger PIN: 232-792-731
+2023-12-08 18:48:31,225 - INFO - _internal.py - _log - line 96 -  * Detected change in '/Users/afonsomartins/Documents/FEUP/MEIC1/PRI/PRI_F1/Frontent/app/backend/approaches/chatreadretrieveread.py', reloading

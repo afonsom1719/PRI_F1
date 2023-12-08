@@ -151,9 +151,9 @@ export const QuestionInput = ({ onSend, disabled, placeholder, clearOnSend, onFi
         <>
             <Stack className={styles.questionInputContainer}>
                 <Stack horizontal className={`${styles.spaceBetweenElements}`}>
-                    <div style={{ display: "flex" }}>
+                    {/* <div style={{ display: "flex" }}> */}
                         {/* <Dropdown options={languages} codes={codes} onSelect={handleSelect} label="Choose a language" /> */}
-                        <div
+                        {/* <div
                             className={`${styles.questionInputSendButton} ${styles.centerElements}`}
                             aria-label="Audio"
                             role="button"
@@ -170,7 +170,7 @@ export const QuestionInput = ({ onSend, disabled, placeholder, clearOnSend, onFi
                             )}
                         </div>
                     </div>
-                    <SentimentViewer number={sentiment} />
+                    <SentimentViewer number={sentiment} /> */}
                 </Stack>
                 <Stack horizontal className={`${styles.marginTop}`}>
                     <TextField

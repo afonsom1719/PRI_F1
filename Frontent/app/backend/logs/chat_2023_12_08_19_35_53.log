@@ -1,0 +1,15 @@
+2023-12-08 19:35:53,097 - WARNING - _internal.py - _log - line 96 -  * Debugger is active!
+2023-12-08 19:35:53,104 - INFO - _internal.py - _log - line 96 -  * Debugger PIN: 232-792-731
+2023-12-08 19:36:09,194 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:36:09] "GET / HTTP/1.1" 200 -
+2023-12-08 19:36:09,225 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:36:09] "GET /assets/index-hubsoAKb.js HTTP/1.1" 200 -
+2023-12-08 19:36:09,226 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:36:09] "GET /assets/index-oYYtWWvi.css HTTP/1.1" 200 -
+2023-12-08 19:36:34,268 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:36:34] "[33mGET / HTTP/1.1[0m" 404 -
+2023-12-08 19:36:47,552 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:36:47] "GET / HTTP/1.1" 200 -
+2023-12-08 19:36:47,570 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:36:47] "GET /assets/index-MPlETFUW.js HTTP/1.1" 200 -
+2023-12-08 19:36:47,571 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:36:47] "GET /assets/index-oYYtWWvi.css HTTP/1.1" 200 -
+2023-12-08 19:38:54,489 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:38:54] "GET / HTTP/1.1" 200 -
+2023-12-08 19:38:54,518 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:38:54] "GET /assets/index-iW-J85Mz.js HTTP/1.1" 200 -
+2023-12-08 19:38:54,519 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:38:54] "GET /assets/index-oYYtWWvi.css HTTP/1.1" 200 -
+2023-12-08 19:40:05,872 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:40:05] "GET / HTTP/1.1" 200 -
+2023-12-08 19:40:05,892 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:40:05] "GET /assets/index-C5EEmM1t.js HTTP/1.1" 200 -
+2023-12-08 19:40:05,893 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:40:05] "GET /assets/index-oYYtWWvi.css HTTP/1.1" 200 -
