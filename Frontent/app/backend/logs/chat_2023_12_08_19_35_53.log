@@ -13,3 +13,9 @@
 2023-12-08 19:40:05,872 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:40:05] "GET / HTTP/1.1" 200 -
 2023-12-08 19:40:05,892 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:40:05] "GET /assets/index-C5EEmM1t.js HTTP/1.1" 200 -
 2023-12-08 19:40:05,893 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 19:40:05] "GET /assets/index-oYYtWWvi.css HTTP/1.1" 200 -
+2023-12-08 22:43:03,268 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 22:43:03] "GET / HTTP/1.1" 200 -
+2023-12-08 22:43:03,286 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 22:43:03] "[36mGET /assets/index-C5EEmM1t.js HTTP/1.1[0m" 304 -
+2023-12-08 22:43:03,287 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 22:43:03] "[36mGET /assets/index-oYYtWWvi.css HTTP/1.1[0m" 304 -
+2023-12-08 22:43:13,067 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 22:43:13] "GET / HTTP/1.1" 200 -
+2023-12-08 22:43:13,086 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 22:43:13] "[36mGET /assets/index-oYYtWWvi.css HTTP/1.1[0m" 304 -
+2023-12-08 22:43:13,087 - INFO - _internal.py - _log - line 96 - 127.0.0.1 - - [08/Dec/2023 22:43:13] "[36mGET /assets/index-C5EEmM1t.js HTTP/1.1[0m" 304 -
