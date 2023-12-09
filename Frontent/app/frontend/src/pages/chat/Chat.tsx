@@ -200,7 +200,12 @@ const Chat = () => {
                 <div className={styles.chatContainer}>
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
-                            <SwimmingPoolFilled fontSize={"120px"} primaryFill={"rgba(255, 50, 0, 1)"} aria-hidden="true" aria-label="Chat logo" />
+                            <img
+                            src= "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/2560px-F1.svg.png"
+                            alt="gfg-logo"
+                            height="50"
+                            width="200"
+                            /> 
                             <h1 className={styles.chatEmptyStateTitle}>Chat with Formula GPT</h1>
                             <h2 className={styles.chatEmptyStateSubtitle}>Ask anything or try an example</h2>
                             <ExampleList onExampleClicked={onExampleClicked} />
